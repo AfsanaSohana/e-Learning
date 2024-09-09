@@ -4,10 +4,6 @@ import './App.css';
 function App() {
   return (
    <>
-   <!DOCTYPE html>
-<html lang="en">
-
-
 
 <body>
     {/* Spinner Start */}
@@ -383,7 +379,7 @@ function App() {
                     </div>
                 </div>
                 <div className="testimonial-item text-center">
-                    <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style={{width: '80px'{{ height: '80px'}}/>
+                    <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style={{width: '80px', height: '80px'}}/>
                     <h5 className="mb-0">Client Name</h5>
                     <p>Profession</p>
                     <div className="testimonial-text bg-light text-center p-4">
@@ -391,7 +387,7 @@ function App() {
                     </div>
                 </div>
                 <div className="testimonial-item text-center">
-                    <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style={{width:' 80px'{{ height: '80px'}}/>
+                    <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style={{width:'80px', height: '80px'}}/>
                     <h5 className="mb-0">Client Name</h5>
                     <p>Profession</p>
                     <div className="testimonial-text bg-light text-center p-4">
@@ -399,7 +395,7 @@ function App() {
                     </div>
                 </div>
                 <div className="testimonial-item text-center">
-                    <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style={{width: '80px'{{ height: '80px'}}/>
+                    <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style={{width: '80px', height: '80px'}}/>
                     <h5 className="mb-0">Client Name</h5>
                     <p>Profession</p>
                     <div className="testimonial-text bg-light text-center p-4">
@@ -498,17 +494,8 @@ function App() {
     <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
 
 
-    {/* JavaScript Libraries */}
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+   
 
-    {/* Template Javascript */}
-    <script src="js/main.js"></script>
-</body>
 
 </html>
    </>
