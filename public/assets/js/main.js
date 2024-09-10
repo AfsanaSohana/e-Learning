@@ -1,3 +1,4 @@
+window.onload=function(){
 (function ($) {
     "use strict";
 
@@ -107,3 +108,4 @@
     
 })(jQuery);
 
+}
