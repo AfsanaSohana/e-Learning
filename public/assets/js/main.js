@@ -1,3 +1,4 @@
+window.onload=function(){
 (function ($) {
     "use strict";
 
@@ -13,7 +14,7 @@
     
     
     // Initiate the wowjs
-    new WOW().init();
+    //new WOW().init();
 
 
     // Sticky Navbar
@@ -107,3 +108,4 @@
     
 })(jQuery);
 
+}

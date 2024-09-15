@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Course Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .course-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Welcome to Our E-Learning Platform</h1>
+        
+        <div class="text-center mb-4">
+            <button class="btn btn-primary m-2" onclick="showCourses('programming')">Programming</button>
+            <button class="btn btn-primary m-2" onclick="showCourses('design')">Design</button>
+            <button class="btn btn-primary m-2" onclick="showCourses('marketing')">Marketing</button>
+            <button class="btn btn-primary m-2" onclick="showCourses('business')">Business</button>
+        </div>
+        
+        <div id="course-list" class="row">
+            <!-- Courses will be displayed here based on selected category -->
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const courses = {
+            programming: [
+                { title: "Introduction to Python", description: "Learn the basics of Python programming." },
+                { title: "JavaScript for Beginners", description: "Get started with JavaScript and web development." }
+            ],
+            design: [
+                { title: "Graphic Design Basics", description: "Explore the fundamentals of graphic design." },
+                { title: "UI/UX Design Principles", description: "Understand the principles of user interface and experience design." }
+            ],
+            marketing: [
+                { title: "Digital Marketing 101", description: "An introduction to digital marketing strategies." },
+                { title: "SEO Fundamentals", description: "Learn the basics of search engine optimization." }
+            ],
+            business: [
+                { title: "Entrepreneurship Essentials", description: "Get to know the essentials of starting a business." },
+                { title: "Project Management Basics", description: "Understand the fundamentals of managing projects effectively." }
+            ]
+        };
+
+        function showCourses(category) {
+            const courseList = document.getElementById('course-list');
+            courseList.innerHTML = '';
+
+            const selectedCourses = courses[category] || [];
+
+            selectedCourses.forEach(course => {
+                const courseItem = document.createElement('div');
+                courseItem.className = 'col-md-4';
+                courseItem.innerHTML = `
+                    <div class="course-item">
+                        <h4>${course.title}</h4>
+                        <p>${course.description}</p>
+                    </div>
+                `;
+                courseList.appendChild(courseItem);
+            });
+        }
+    </script>
+</body>
+</html>
