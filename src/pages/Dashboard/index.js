@@ -11,8 +11,8 @@ function Dashboard() {
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                                    <h5 className="mb-3">Skilled Instructors</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5 className="mb-3">এস এস সি, ২০২৫ এইস এসসি২০২৫</h5>
+                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
                                 </div>
                             </div>
                         </div>
@@ -20,8 +20,8 @@ function Dashboard() {
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-globe text-primary mb-4"></i>
-                                    <h5 className="mb-3">Online Classes</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5 className="mb-3">স্কুল, বিশ্ববিদ্যালয় ভর্তি‍ পরীক্ষা</h5>
+                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
                                 </div>
                             </div>
                         </div>
@@ -29,8 +29,8 @@ function Dashboard() {
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-home text-primary mb-4"></i>
-                                    <h5 className="mb-3">Home Projects</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5 className="mb-3">বিসিএস সকল পার্টের প্রস্তুতি</h5>
+                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
                                 </div>
                             </div>
                         </div>
@@ -38,8 +38,8 @@ function Dashboard() {
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-book-open text-primary mb-4"></i>
-                                    <h5 className="mb-3">Book Library</h5>
-                                    <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                    <h5 className="mb-3">চাকরি ও শিক্ষক নিয়োগ প্রস্তুতি</h5>
+                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
                                 </div>
                             </div>
                         </div>

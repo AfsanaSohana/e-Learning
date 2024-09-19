@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Learning Course Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
-    <style>
-        .course-item {
+    
+        const course-item={
             margin-bottom: 15px;
             padding: 15px;
             border: 1px solid #ddd;
@@ -17,18 +17,18 @@
     </style>
 </head>
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center mb-4">Welcome to Our E-Learning Platform</h1>
+    <div className="container mt-4">
+        <h1 className="text-center mb-4">Welcome to Our E-Learning Platform</h1>
         
-        <div class="text-center mb-4">
-            <button class="btn btn-primary m-2" onclick="showCourses('programming')">Programming</button>
-            <button class="btn btn-primary m-2" onclick="showCourses('design')">Design</button>
-            <button class="btn btn-primary m-2" onclick="showCourses('marketing')">Marketing</button>
-            <button class="btn btn-primary m-2" onclick="showCourses('business')">Business</button>
+        <div className="text-center mb-4">
+            <button className="btn btn-primary m-2" onclick="showCourses('programming')">Programming</button>
+            <button className="btn btn-primary m-2" onclick="showCourses('design')">Design</button>
+            <button className="btn btn-primary m-2" onclick="showCourses('marketing')">Marketing</button>
+            <button className="btn btn-primary m-2" onclick="showCourses('business')">Business</button>
         </div>
         
-        <div id="course-list" class="row">
-            <!-- Courses will be displayed here based on selected category -->
+        <div id="course-list" className="row">
+           {/* Courses will be displayed here based on selected category*/}
         </div>
     </div>
 
@@ -63,7 +63,7 @@
                 const courseItem = document.createElement('div');
                 courseItem.className = 'col-md-4';
                 courseItem.innerHTML = `
-                    <div class="course-item">
+                    <div className="course-item">
                         <h4>${course.title}</h4>
                         <p>${course.description}</p>
                     </div>
