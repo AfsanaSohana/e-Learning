@@ -31,17 +31,17 @@ function Skill(){
             </div>
             <div class="col-2">
                 <div class="square">
-                    <div class="square-content"></div>
+                    <div class="square-content">ইংরেজি শেখার কোর্স</div>
                 </div>
             </div>
             <div class="col-2">
                 <div class="square">
-                    <div class="square-content">5</div>
+                    <div class="square-content">ইংরেজি শেখার কোর্স</div>
                 </div>
             </div>
             <div class="col-2">
                 <div class="square">
-                    <div class="square-content">6</div>
+                    <div class="square-content">ইংরেজি শেখার কোর্স</div>
                 </div>
             </div>
         </div>

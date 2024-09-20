@@ -12,11 +12,49 @@ function Slider() {
                             <div className="row justify-content-start">
                                 <div className="col-sm-10 col-lg-8">
                                     
-                                    <h1 className="display-3 text-white animated slideInDown">৬ষ্ঠ-এইচএসসি শ্রেণির অনলাইন ব্যাচ ও স্কিল ডেভেলপমেন্টের নির্দিষ্ট কোর্স দারুণ ছাড়ে ভর্তি চলছে!</h1>
-                                    <h5 className="text-white mb-3 animated slideInDown">বছর জুড়ে অভিজ্ঞ শিক্ষকদের সাথে সম্পূর্ণ সিলেবাসের 💯 তে 💯 প্রস্তুতি!</h5>
-                                    <p className="fs-5 text-white mb-4 pb-2"style={{ font: "" }}>পুরো মাস জুড়ে টেন মিনিট স্কুলের নির্দিষ্ট কোর্সসমূহ পেয়ে যান বিশেষ মূল্যে। এবার শেখার শুরু হোক টেন মিনিট স্কুলের সাথে!</p>
+                                    <h1 className="display-3 text-white animated slideInDown">৬ষ্ঠ-এইচএসসি শ্রেণির অনলাইন ব্যাচের ভর্তি চলছে!</h1>
+                                    <h5 className="text-white mb-3 animated slideInDown"></h5>
+                                    <p className="fs-5 text-white mb-4 pb-2"style={{ font: "" }}>পুরো মাস জুড়ে আমাদের নির্দিষ্ট কোর্সসমূহ পেয়ে যান বিশেষ মূল্যে। এবার শেখার শুরু হোক আমাদের সাথে!</p>
                                     <a href="" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                    <a href="" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                    <a href="" className="btn btn-light py-md-3 px-md-5 animated slideInRight" data-bs-toggle="modal" data-bs-target="#joinModal">জয়েন করুন</a>
+                                    {/* Modal Structure */}
+                                        <div className="modal fade" id="joinModal" tabindex="-1" aria-labelledby="joinModalLabel" aria-hidden="true">
+                                            <div className="modal-dialog">
+                                                <div className="modal-content"style={{justifyContent: "center"}}>
+                                                    <div className="modal-header">
+                                                            <h5 className="modal-title" id="joinModalLabel">ক্লাসে প্রবেশ করুন</h5>
+                                                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+
+                                                        <div className="modal-body">
+                                                        {/* Form inside Modal */}
+                                                            <form  >
+                                                                    <div className="mb-3 ">
+                                                                    <label for="name" className="form-label">নাম ঃ</label>
+                                                                    <input type="text" className="form-control" id="name" placeholder="সোহানা আফসানা" />
+                                                                    
+                                                                    </div>
+                                                                    <div className="mb-3">
+                                                                    <label for="name" className="form-label">আপনি একজন ঃ</label>
+                                                                    <input type="radio" className="form-control" id="শীক্ষার্থী"  value="শীক্ষার্থী" />শীক্ষার্থী
+                                                                    <input type="radio" className="form-control" id="অবিভাবক"  value="অবিভাবক" />অবিভাবক
+
+                                                                    </div>
+                                                                    <div className="mb-3">
+                                                                    <label for="email" className="form-label">শ্রেণি</label>
+                                                                    <input type="email" className="form-control" id="email"  placeholder="৬ষ্ঠ"/>
+                                                                    </div>
+                                                                    <div className="mb-3">
+                                                                    <label for="password" className="form-label">আইডি নম্বার ঃ</label>
+                                                                    <input type="password" className="form-control" id="password" />
+                                                                    </div>
+                                                                <button type="submit" className="btn btn-primary">প্রবেশ করুন</button>
+                                                            </form>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            {/* Form inside Modal */}
                                 </div>
                             </div>
                         </div>
@@ -28,11 +66,10 @@ function Slider() {
                         <div className="container">
                             <div className="row justify-content-start">
                                 <div className="col-sm-10 col-lg-8">
-                                    <h1 className="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
-                                    <h5 className="text-white mb-3 animated slideInDown">Best Online Courses</h5>
-                                    <p className="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                                    <a href="" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                    <a href="" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                    <h2 className="display-3 text-white animated slideInDown">বছর জুড়ে অভিজ্ঞ শিক্ষকদের সাথে সম্পূর্ণ সিলেবাসের 💯 তে 💯 প্রস্তুতি!</h2>
+                                    <h5 className="text-white mb-3 animated slideInDown">পুরো মাস জুড়ে আমাদের নির্দিষ্ট কোর্সসমূহ পেয়ে যান বিশেষ মূল্যে। এবার শেখার শুরু হোক আমাদের সাথে!</h5>
+                                    <a href="" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">আরও জানুন</a>
+                                    <a href="" className="btn btn-light py-md-3 px-md-5 animated slideInRight" data-bs-toggle="modal" data-bs-target="#joinModal">জয়েন করুন</a>
                                 </div>
                             </div>
                         </div>
@@ -44,11 +81,11 @@ function Slider() {
                         <div className="container">
                             <div className="row justify-content-start">
                                 <div className="col-sm-10 col-lg-8">
-                                    <h1 className="display-3 text-white animated slideInDown">Get Educated Online From Your Home</h1>
+                                    <h1 className="display-3 text-white animated slideInDown">স্কিল ডেভেলপমেন্টের নির্দিষ্ট কোর্স দারুণ ছাড়ে ভর্তি চলছে!</h1>
                                     <h5 className="text-white mb-3 animated slideInDown">Best Online Courses</h5>
-                                    <p className="fs-5 text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea sanctus eirmod elitr.</p>
-                                    <a href="" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                    <a href="" className="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                                    <p className="fs-5 text-white mb-4 pb-2">পুরো মাস জুড়ে আমাদের নির্দিষ্ট কোর্সসমূহ পেয়ে যান বিশেষ মূল্যে। এবার শেখার শুরু হোক আমাদের সাথে!</p>
+                                    <a href="" className="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">আরও জানুন</a>
+                                    <a href="" className="btn btn-light py-md-3 px-md-5 animated slideInRight" data-bs-toggle="modal" data-bs-target="#joinModal">জয়েন করুন</a>
                                 </div>
                             </div>
                         </div>

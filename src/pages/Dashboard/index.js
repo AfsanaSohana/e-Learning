@@ -4,14 +4,14 @@ import AdminLayout from '../../layouts/AdminLayout'
 function Dashboard() {
     return (
         <AdminLayout>
-            <div className="container-xxl py-5">
+            <div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">
                         <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                                    <h5 className="mb-3">এস এস সি, ২০২৫ এইস এসসি২০২৫</h5>
+                                    <h5 className="mb-3">এস এস সি, ২০২৫ এইস এইস এস সি২০২৫</h5>
                                     <p>সপ্তাহে ৬ দিন ক্লাস</p>
                                 </div>
                             </div>
@@ -46,7 +46,35 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
+{/* ক্লাস বুকিং */}
+<div className="container-xxl py-5">
+                <div className="container">
+                    <div className="row g-4">
+                        
+                        <div className="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                            <div className="service-item text-center pt-3">
+                                <div className="p-4">
+                                    <i className="fa fa-3x fa-home text-primary mb-4"></i>
+                                    <h5 className="mb-3">এস এস সি, ২০২৫ এইস এইস এস সি২০২৫</h5>
+                                    <p>অনলাইন ফ্রি লাইভ ক্লাস</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                            <div className="service-item text-center pt-3">
+                                <div className="p-4">
+                                    <i className="fa fa-3x fa-book-open text-primary mb-4"></i>
+                                    <h5 className="mb-3">৬ষ্ঠ-৯ম শ্রেণির সকাল বিষয়</h5>
+                                    <p>অনলাইন ফ্রি লাইভ ক্লাস</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{/* ক্লাস বুকিং */}
 
+{/* ক্লাস বুকিং শেষ */}
 
 
             <div className="container-xxl py-5">
