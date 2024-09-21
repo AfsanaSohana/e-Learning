@@ -448,3 +448,30 @@
      height: 50px;
      border-radius: 50%;
  }
+
+ /* sschsc page */
+ .box {
+    height: 200px;
+    width: 350px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.box-content {
+    padding: 10px;
+    width: 50%;
+}
+.box img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+.btn-box {
+    margin-top: 10px;
+}

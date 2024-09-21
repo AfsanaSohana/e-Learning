@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
 import Slider from '../../layouts/include/slider';
 import { Button, Modal } from 'react-bootstrap';
-import coursePopup from './coursePopup';
+import { Link, useLocation} from 'react-router-dom';
+
 
 function Dashboard() {
 const [show, setShow] = useState(false);
@@ -11,23 +12,49 @@ const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
     return (
         <AdminLayout>
-            <Slider/>
-
+            
             <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>এইচএসসি এবং এসএসসি ২৫</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-            <coursePopup/>
-            <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-            Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body> 
+            {/*popuplist */}
+  
+          <div className="list-box">
+            <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
+            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
+            
+            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+          </div>
+
+          {/* List Box 2 */}
+          <div className="list-box">
+            <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
+            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 2"/>
+            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+          </div>
+
+          {/* List Box 3 */}
+          <div className="list-box">
+            <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
+            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
+            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+          </div>
+          {/* List Box 4 */}
+          <div className="list-box">
+            <div className="text-left">HSC 26 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
+            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
+            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+          </div>
+</Modal.Body>
         <Modal.Footer>
           
+        {/* <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
           <Button variant="primary" onClick={handleClose}>
             Save Changes
-          </Button>
+          </Button> */}
         </Modal.Footer>
       </Modal>
             <div className="container-xxl py-5 bg-dark">
@@ -42,7 +69,7 @@ const [show, setShow] = useState(false);
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" onClick={handleShow}>
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-globe text-primary mb-4"></i>
@@ -51,7 +78,7 @@ const [show, setShow] = useState(false);
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" onClick={handleShow}>
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-home text-primary mb-4"></i>
@@ -60,7 +87,7 @@ const [show, setShow] = useState(false);
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" onClick={handleShow}>
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-book-open text-primary mb-4"></i>
