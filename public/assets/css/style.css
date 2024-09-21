@@ -432,3 +432,19 @@
     padding-right: 0;
     border-right: none;
 }
+/* course popup */
+ .list-box {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 15px;
+     border: 1px solid #ddd;
+     border-radius: 10px;
+     margin-bottom: 10px;
+ }
+
+ .list-box img {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+ }

@@ -1,13 +1,39 @@
-import React from 'react'
+import React,{useState} from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
+import Slider from '../../layouts/include/slider';
+import { Button, Modal } from 'react-bootstrap';
+import coursePopup from './coursePopup';
 
 function Dashboard() {
+const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
     return (
         <AdminLayout>
+            <Slider/>
+
+            <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+            <coursePopup/>
+            <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+            Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
             <div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"  onClick={handleShow}>
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
@@ -47,7 +73,7 @@ function Dashboard() {
                 </div>
             </div>
 {/* ক্লাস বুকিং */}
-<div className="container-xxl py-5">
+<div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">
                         
