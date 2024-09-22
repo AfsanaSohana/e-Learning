@@ -12,6 +12,7 @@ const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
     return (
         <AdminLayout>
+      
             
             <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -22,7 +23,7 @@ const [show, setShow] = useState(false);
   
           <div className="list-box">
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
-            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
+            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
             
             <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
           </div>
@@ -30,14 +31,14 @@ const [show, setShow] = useState(false);
           {/* List Box 2 */}
           <div className="list-box">
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
-            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 2"/>
+            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 2"/>
             <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
           </div>
 
           {/* List Box 3 */}
           <div className="list-box">
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
-            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
+            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
             <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
           </div>
           {/* List Box 4 */}
@@ -57,6 +58,7 @@ const [show, setShow] = useState(false);
           </Button> */}
         </Modal.Footer>
       </Modal>
+      <Slider />
             <div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">

@@ -3,6 +3,7 @@ import Dashboard from './pages/Dashboard';
 import Skill from './pages/Skill';
 import Form from './pages/Form';
 import SscHsc from './pages/SscHsc';
+import './pages/SscHsc/style.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Slider from './layouts/include/slider';
 

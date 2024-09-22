@@ -101,7 +101,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -157,7 +157,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -197,7 +197,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -207,7 +207,7 @@
     background: rgba(15, 23, 43, .7);
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -318,6 +318,7 @@
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -325,6 +326,7 @@
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -432,46 +434,59 @@
     padding-right: 0;
     border-right: none;
 }
+
 /* course popup */
- .list-box {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 15px;
-     border: 1px solid #ddd;
-     border-radius: 10px;
-     margin-bottom: 10px;
- }
+.list-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
- .list-box img {
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
- }
+.list-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+}
 
- /* sschsc page */
- .box {
+/* sschsc page */
+.HeaderBox {
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    width: 80%;
+}
+
+.box {
     height: 200px;
-    width: 350px;
+    width: 550px;
     border: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    border-radius: 4%;
 }
+
 .box-content {
     padding: 10px;
-    width: 50%;
+    width: 80%;
 }
+
 .box img {
     width: 150px;
     height: 100%;
     object-fit: cover;
 }
+
 .icon {
     font-size: 20px;
     margin-right: 10px;
 }
+
 .btn-box {
     margin-top: 10px;
 }

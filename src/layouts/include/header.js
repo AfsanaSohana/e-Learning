@@ -29,18 +29,56 @@ function Header() {
             </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
                 <div className="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" className="nav-item nav-link active">Home</a>
-                    <a href="about.html" className="nav-item nav-link">About</a>
-                    <Link to={"/Skill"} className="nav-item nav-link" >Courses</Link>
+                 
+                    
                     <div className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">ক্লাস ৬-১২</a>
                         <div className="dropdown-menu fade-down m-0">
-                            <a href="team.html" className="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-                            <a href="404.html" className="dropdown-item">404 Page</a>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class one</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class two</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class three</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class foure</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class five</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class six</Link>
+                           
                         </div>
                     </div>
-                    <a href="contact.html" className="nav-item nav-link">Contact</ a>
+                    <div className="nav-item dropdown">
+                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">স্কিলস</a>
+                        <div className="dropdown-menu fade-down m-0">
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item"> All course</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Language Learning</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Freelancing</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">skills & IT</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Kids(Age 7-14)</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Professional</Link>
+                           
+                        </div>
+                    </div>
+                    <div className="nav-item dropdown">
+                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">অনলাইন ব্যাচ</a>
+                        <div className="dropdown-menu fade-down m-0">
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item"> online batch(6-10)</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">SSC</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Hsc</Link>
+                            
+                           
+                        </div>
+                    </div>
+                    
+                    <div className="nav-item dropdown">
+                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">অনলাইন ব্যাচ</a>
+                        <div className="dropdown-menu fade-down m-0">
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item"> online batch(6-10)</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">SSC</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Hsc</Link>
+                            
+                           
+                        </div>
+                    </div>
+                    
+                    
+                    <Link to={"/Skill"} href="contact.html" className="nav-item nav-link">ভর্তি পরীক্ষা</Link>
                 </div>
                 <a href="" className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i className="fa fa-arrow-right ms-3"></i></a>
             </div>
