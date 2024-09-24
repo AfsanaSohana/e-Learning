@@ -32,9 +32,9 @@ function Header() {
                  
                     
                     <div className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">ক্লাস ৬-১২</a>
+                        <a href="#" className="nav-link dropdown-toggle " data-bs-toggle="dropdown">ক্লাস ৬-১২</a>
                         <div className="dropdown-menu fade-down m-0">
-                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class one</Link>
+                            <Link to={"/DemoClass1"}  href="team.html" className="dropdown-item position-relative has-icon-left">Class one</Link>
                             <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class two</Link>
                             <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class three</Link>
                             <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class foure</Link>
