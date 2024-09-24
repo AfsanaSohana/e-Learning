@@ -3,7 +3,7 @@ import AdminLayout from '../../layouts/AdminLayout'
 import Slider from '../../layouts/include/slider';
 import { Button, Modal } from 'react-bootstrap';
 import { Link, useLocation} from 'react-router-dom';
-
+import OfferBanner from '../../layouts/include/OfferBanner';
 
 function Dashboard() {
 const [show, setShow] = useState(false);
@@ -12,9 +12,7 @@ const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
     return (
         <AdminLayout>
-      
-            
-            <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>এইচএসসি এবং এসএসসি ২৫</Modal.Title>
         </Modal.Header>
@@ -25,7 +23,7 @@ const [show, setShow] = useState(false);
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
             <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
             
-            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+            <Link to="/DemoClass1" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
           </div>
 
           {/* List Box 2 */}
