@@ -1,13 +1,13 @@
 import React from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
-
+import OfferBanner from '../../layouts/include/OfferBanner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SscHsc(){
     return(
         
         <AdminLayout>
-     
+            <OfferBanner/>
         <div className='HeaderBox container mb-5  bg-red'>
             <h1>৬ষ্ঠ-এইচ এস সি শ্রেণীর </h1>        
             <h1>অনলাইন ব্যাচে ভর্তি চলছে </h1> 
