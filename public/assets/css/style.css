@@ -479,24 +479,23 @@
 
 /* democlass1 */
 
-  .bg-image {
-    background-image: url('/assets/img/bluebg.jpg'); /* Replace with your image URL */
+  
+.custom-div {
+    background-image: url('/assets/img/academic-background.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    height: 700px;
-    position: relative;
-    opacity: var(--dark);
+    height: 200px;
+  }
+  .custom-div .left-text {
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 20px;
   }
 
  
 
-  .content {
-    position: relative;
-    z-index: 1;
-    color: white;
-   
-    padding-top: 25px; /* Vertically center content */
-  }
+  
+
   
   .offer-banner {
     position: fixed;
