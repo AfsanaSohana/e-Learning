@@ -1,7 +1,11 @@
 import React from 'react'
 import OfferBanner from '../../layouts/include/OfferBanner'
-
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
 function DemoClass1() {
+
+
   return (
     <>
    
