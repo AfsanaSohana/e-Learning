@@ -2,8 +2,8 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 function Slider() {
     return (
-        <div className="container-fluid p-0 mb-5">
-            <div className="owl-carousel header-carousel position-relative">
+        <div className="container-fluid p-0 mb-5 ">
+            <div className="owl-carousel header-carousel position-relative ">
                 <div className="owl-carousel-item position-relative">
                     <img className="img-fluid" src="./assets/img/carousel-1.jpg" alt="" />
                     <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style={{ background: "rgba(24, 29, 56, .7)" }}>

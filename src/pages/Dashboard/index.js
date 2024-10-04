@@ -1,17 +1,16 @@
 import React,{useState} from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
-import Slider from '../../layouts/include/slider';
+import Slider from '../Slider';
 import { Button, Modal } from 'react-bootstrap';
 import { Link, useLocation} from 'react-router-dom';
-import OfferBanner from '../../layouts/include/OfferBanner';
 
 function Dashboard() {
 const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
     return (
         <AdminLayout>
+        
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>এইচএসসি এবং এসএসসি ২৫</Modal.Title>

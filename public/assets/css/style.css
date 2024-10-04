@@ -514,3 +514,57 @@
   .page-content {
     margin-top: 100px; /* Adjust this depending on the height of the banner */
   }
+  /* ict online batch page */
+  .gradiant-background{
+    width: 100%;
+            height: 200px;
+            background: linear-gradient(to right, #08145a, #097e9b); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+  }
+ 
+  
+  .left {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content-box {
+    width: 300px;
+    padding: 20px;
+    background-color: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  
+/*   
+  .buy-button {
+    padding: 10px 20px;
+    background-color: #06532f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+  
+  .buy-button:hover {
+    background-color: #0b6426;
+  }
+  .card{
+    background-color: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
