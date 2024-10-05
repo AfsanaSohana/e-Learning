@@ -25,6 +25,7 @@ function App() {
         <Route path="/DemoClass1" element={<DemoClass1 />} />
         <Route path="/IctOnlineBatch" element={<IctOnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
+    
 
       </Routes>
     </BrowserRouter>

@@ -3,12 +3,13 @@ import { Link, useLocation} from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import PopularCourse from '../PopularCourse';
 
+
 function ClassInfo() {
   return (
     <>
     <div className='col-8 p-3 '>
       {/* HashLink Nav */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -36,12 +37,12 @@ function ClassInfo() {
             </ul>
           </div>
         </div>
-      </nav> 
+      </nav>  */}
 
       {/* Sections */}
       {/* class routine */}
-      <div id="section1 content-align-center " style={{ backgroundColor: '#f8f9fa' }}>
-      <h2>ক্লাস রুটিন</h2>
+      <div className="p-2" id="section1 content-align-center " style={{ backgroundColor: '#f8f9fa', borderRadius:'3' }}>
+      <h3>ক্লাস রুটিন</h3>
 
 <table className="table table-bordered p-3">
       <thead>
@@ -101,8 +102,8 @@ function ClassInfo() {
 </table>
       </div>
       {/* sylabus */}
-      <div id="section2 p-2 " style={{  backgroundColor: '#e9ecef'}}>
-        <h1 className='mt-2'>কোর্স সিলেবাস</h1>
+      <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
+        <h3 className='mt-2'>কোর্স সিলেবাস</h3>
         <div class="container mt-4 p-2">
     <table class="table table-bordered">
       <tbody>
@@ -111,7 +112,7 @@ function ClassInfo() {
           <td>
             <p> ICT সিলেবাস</p>
             <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
-              Read more &darr;
+               &darr;
             </a>
             <div class="collapse" id="collapseRow1">
                             <ul className="list-unstyled">
@@ -144,7 +145,7 @@ function ClassInfo() {
           <td>
             <p>মডেল টেস্ট</p>
             <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow2" role="button" aria-expanded="false" aria-controls="collapseRow2">
-              Read more &darr;
+               &darr;
             </a>
             <div class="collapse" id="collapseRow2">
              <ul className="list-unstyled">
@@ -176,16 +177,102 @@ function ClassInfo() {
     </table>
   </div>
       </div>
-      <div id="section3" style={{backgroundColor: '#dee2e6' }}>
-        <h1>Section 3</h1>
-        <h5>এসএসসি 2025 ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ প্লাস নিশ্চিত করতে 
-                    আমরা নিয়ে এসেছি এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
-                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
-                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
-                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</h5>
+      <div  className ='mt-3 p-3'id="section3 " style={{backgroundColor: '#dee2e6', borderRadius:'3' }}>
+        <h3 >কোর্স ইন্সট্রাক্টর</h3> 
+        
+        <div className="table table-bordered p-3">
+          {/* List Box 1 */}
+          <tr>
+            <td>
+              <div className="list-box">
+                <div className="text-left"> <h5>Tanmay Dhar</h5>
+                  <p className='text-muted me-2'style={{fontSize:'10' }}> DU, CU (8+ years exp)</p>
+               </div>
+                <img src="/assets/img/teama-1.jpg" alt="Item 1"/>
+           
+              </div>
+            </td>
+            <td>
+            <div className="list-box">
+                <div className="text-left"> <h5>Tanmay Dhar</h5>
+                  <p className='text-muted me-2'style={{fontSize:'10' }}> DU, CU (8+ years exp)</p>
+               </div>
+                <img src="/assets/img/teamb-2.jpg" alt="Item 1"/>
+           
+              </div>
+            </td>
+            </tr>
+            {/*  */}
+          <tr>
+            <td>
+            <div className="list-box">
+                <div className="text-left"> <h5>Tanmay Dhar</h5>
+                  <p className='text-muted me-2'style={{fontSize:'10' }}> DU, CU (8+ years exp)</p>
+               </div>
+                <img src="/assets/img/teamc-3.jpg" alt="Item 1"/>
+           
+              </div>
+            </td>
+            <td>
+            <div className="list-box">
+                <div className="text-left"> <h5>Tanmay Dhar</h5>
+                  <p className='text-muted me-2'style={{fontSize:'10' }}> DU, CU (8+ years exp)</p>
+               </div>
+                <img src="/assets/img/teamd-4.jpg" alt="Item 1"/>
+           
+              </div>
+            </td>
+            </tr>
+        </div> 
+      </div> 
+      <div className =' mt-3 p-3' id="section3" style={{backgroundColor: '#dee2e6',borderRadius:'3' }}>
+        <h3>কোর্স সম্পর্কে বিস্তারিত</h3>
+          {/* sylabus */}
+    <table class="table table-bordered ">
+        {/* <!-- Row 1 --> */}
+        <tr>
+          <td>
+            <p> কোর্সটিতে যা যা আছে</p>
+            <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
+               &darr;
+            </a>
+            <div class="collapse" id="collapseRow1">
+                            <ul className="list-unstyled text-muted">
+                                <li className="mb-2 ">
+                      
+                                    - যারা এইচএসসি ২০২৬ পরীক্ষায় বিজ্ঞান বিভাগ থেকে যোগ দেবে।
+                                  
+                                </li>
+                                <li className="mb-2 ">
+
+                                    - যারা এইচএসসি পরীক্ষার পদার্থবিজ্ঞান, রসায়ন, জীববিজ্ঞান ও উচ্চতর গণিত বিষয়ে সিলেবাস শেষ করতে চায়।<br/>
+
+                                </li>
+                                <li className="mb-2 ">- যারা রুটিনের মধ্যে থেকে পড়াশোনা আগাতে চায়।</li>
+                                <li className="mb-2 ">- যারা নিজের প্রস্তুতি কতটা সম্পন্ন হয়েছে তা নিয়মিত ট্র্যাক করতে চায়।<br/>
+
+                                </li>
+                                <li className="mb-2 ">- যারা প্রয়োজনীয় এক্সাম হ্যাকস এবং প্রশ্ন এনালাইসিস টেকনিক শিখে নিজেদের আত্মবিশ্বাস বাড়াতে চায়।
+                                </li>
+                                <li className="mb-2 ">- যারা নিজের প্রস্তুতি কতটা সম্পন্ন হয়েছে তা নিয়মিত ট্র্যাক করতে চায়।<br/>
+
+                                </li>
+                                <li className="mb-2 ">- যারা প্রয়োজনীয় এক্সাম হ্যাকস এবং প্রশ্ন এনালাইসিস টেকনিক শিখে নিজেদের আত্মবিশ্বাস বাড়াতে চায়।<br/>
+
+                                </li>
+                                <li className="mb-2 ">- যারা এইচএসসির পাশাপাশি বিশ্ববিদ্যালয় ভর্তি পরীক্ষার জন্যও কলেজ থেকেই প্রস্তুত থাকতে চায়।<br/>
+                                  
+                                </li>
+                              
+                            </ul>
+            </div>
+          </td>
+        </tr>
+        </table>
       </div>
     </div>
-   
+
+  
   </>
   )
 }

@@ -3,6 +3,7 @@ import OfferBanner from '../../layouts/include/OfferBanner'
 import AdminLayout from '../../layouts/AdminLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ClassInfo from '../ClassInfo';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Link, useLocation} from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -21,7 +22,7 @@ const isLinkActive = (path) => {
     <AdminLayout>
         <OfferBanner/> 
 
-            <div className='gradiant-background row p-3'>
+            <div className='gradiant-background row p-3 '>
                 <div className='  col-md-6 d-flex align-items-center p-3'>
                     <h5>এসএসসি 2025 ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ প্লাস নিশ্চিত করতে 
                     আমরা নিয়ে এসেছি এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
@@ -29,7 +30,7 @@ const isLinkActive = (path) => {
                     গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
                     হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</h5>
                 </div>
-                <div className="col-md-4 ">
+                <div className="col-md-4 position-sticky ">
                     <div className="card  p-3 "> <button type="button" className="btn-close btn-outline-white" data-bs-dismiss="alert" aria-label="Close"></button>
                         {/* Video */}
                         <div className="embed-responsive embed-responsive-16by9 mb-1">
@@ -42,7 +43,7 @@ const isLinkActive = (path) => {
                         </div>
 
                         {/* card */}
-                        <div className="card-body">
+                        <div className="card-body " style={{ position: "sticky", }}>
                             <p className="card-title">HSC 25 ICT 2.0 (সম্পূর্ণ সিলেবাস)</p>
                             <p className="card-text">
                             কোর্স ফি: <strong>৳1500</strong><span><p><s>৳3500</s></p></span>
@@ -73,6 +74,7 @@ const isLinkActive = (path) => {
                 </div>
                 
             </div> 
+           
             
 
            <ClassInfo/>
