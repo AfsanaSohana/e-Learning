@@ -10,20 +10,28 @@ function ClassInfo() {
       {/* HashLink Nav */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">HashLink Nav</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/#section1" className="nav-link">Section 1</Link>
+                <a href="/#section1" className="nav-link">ক্লাস রুটিন</a>
               </li>
               <li className="nav-item">
-                <Link  to="/#section2" className="nav-link">Section 2</Link>
+                <a href="/#section2" className="nav-link">কোর্স সিলেবাস</a>
               </li>
               <li className="nav-item">
-                <Link  to="/#section3" className="nav-link">Section 3</Link>
+                <a href="/#section3" className="nav-link">ক্লাস রুটিন</a>
+              </li>
+              <li className="nav-item">
+                <a href="/#section1" className="nav-link">ক্লাস রুটিন</a>
+              </li>
+              <li className="nav-item">
+                <a href="/#section2" className="nav-link">কোর্স সিলেবাস</a>
+              </li>
+              <li className="nav-item">
+                <a href="/#section3" className="nav-link">ক্লাস রুটিন</a>
               </li>
             </ul>
           </div>
@@ -32,82 +40,143 @@ function ClassInfo() {
 
       {/* Sections */}
       {/* class routine */}
-      <div id="section1" style={{ height: '100vh', backgroundColor: '#f8f9fa' }}>
-      <h2>Weekly Class Schedule</h2>
+      <div id="section1 content-align-center " style={{ backgroundColor: '#f8f9fa' }}>
+      <h2>ক্লাস রুটিন</h2>
 
-<table className="table table-bordered">
-  <thead>
-      <tr>
-          <th>Time</th>
-          <th>Monday</th>
-          <th>Tuesday</th>
-          <th>Wednesday</th>
-          <th>Thursday</th>
-          <th>Friday</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td className="table-primary">9:00 - 10:00 AM</td>
-          <td className="table-secondary">Math</td>
-          <td className="table-warning">Science</td>
-          <td className="table-danger">History</td>
-          <td className="table-success">Math</td>
-          <td className="table-info">English</td>
-      </tr>
-      <tr>
-          <td className="time-column">10:00 - 11:00 AM</td>
-          <td className="subject">English</td>
-          <td className="table-warning">Math</td>
-          <td className="table-success">Science</td>
-          <td className="table-secondary">History</td>
-          <td className="table-primary">Math</td>
-      </tr>
-      <tr>
-          <td className="time-column">11:00 - 12:00 PM</td>
-          <td className="table-secondary">History</td>
-          <td className="subjetable-primaryct">English</td>
-          <td className="table-warning">Math</td>
-          <td className="subject">Science</td>
-          <td className="table-info">English</td>
-      </tr>
-      <tr>
-          <td className="time-column">12:00 - 1:00 PM</td>
-          <td className="subject">History</td>
-          <td className="table-secondary">English</td>
-          <td className="table-primary">Math</td>
-          <td className="subject">Science</td>
-          <td className="table-primary">English</td>
-      </tr>
-      <tr>
-          <td className="time-column">1:00 - 2:00 PM</td>
-          <td className="table-success">Science</td>
-          <td className="subject">History</td>
-          <td className="table-warning">English</td>
-          <td className="subjectable-secondaryt">Math</td>
-          <td className="table-primary">Science</td>
-      </tr>
-      <tr>
-          <td className="time-column">2:00 - 3:00 PM</td>
-          <td className="table-primary">Math</td>
-          <td className="subject">English</td>
-          <td className="table-success">Science</td>
-          <td className="table-warning">History</td>
-          <td className="table-secondary">Math</td>
-      </tr>
-  </tbody>
+<table className="table table-bordered p-3">
+      <thead>
+          <tr>
+              <th>বিকাল ৪ টা</th>
+              <th>দিন</th>
+            
+            
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td className="table-primary">সাপ্তাহিক ছুটি</td>
+              <td className="table-secondary">শনিবার</td>
+              
+              
+              
+          </tr>
+          <tr>
+              <td className="time-column">সাপ্তাহিক ছুটি</td>
+              <td className="subject">রবিবার</td>
+              
+              
+          </tr>
+          <tr>
+              <td className="time-column">সাপ্তাহিক ছুটি</td>
+              <td className="table-secondary">সোমবার</td>
+            
+              
+          </tr>
+          <tr>
+              <td className="time-column">সাপ্তাহিক ছুটি</td>
+              <td className="subject">মঙ্গলবার</td>
+          
+              
+          </tr>
+          <tr>
+              <td className="time-column">ICT</td>
+              <td className="table-success">বুধবার</td>
+            
+            
+          </tr>
+          <tr>
+              <td className="time-column">সাপ্তাহিক ছুটি</td>
+              <td className="table-primary">বৃহস্পতিবার</td>
+              
+            
+          </tr>
+          <tr>
+              <td className="time-column">সাপ্তাহিক ছুটি</td>
+              <td className="table-primary">শুক্রবার</td>
+            
+            
+          </tr>
+        
+      </tbody>
 </table>
       </div>
-      {/* class routine */}
-      <div id="section2" style={{ height: '100vh', backgroundColor: '#e9ecef' }}>
-        <h1>Section 2</h1>
-        <h5>এসএসসি 2025 ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ প্লাস নিশ্চিত করতে 
-                    আমরা নিয়ে এসেছি এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
-                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
-                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
-                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</h5>
+      {/* sylabus */}
+      <div id="section2 p-2 " style={{  backgroundColor: '#e9ecef'}}>
+        <h1 className='mt-2'>কোর্স সিলেবাস</h1>
+        <div class="container mt-4 p-2">
+    <table class="table table-bordered">
+      <tbody>
+        {/* <!-- Row 1 --> */}
+        <tr>
+          <td>
+            <p> ICT সিলেবাস</p>
+            <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
+              Read more &darr;
+            </a>
+            <div class="collapse" id="collapseRow1">
+                            <ul className="list-unstyled">
+                                <li className="mb-2 ">
+                                    <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                            </ul>
+            </div>
+          </td>
+        </tr>
+        {/* <!-- Row 2 --> */}
+        <tr>
+          <td>
+            <p>মডেল টেস্ট</p>
+            <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow2" role="button" aria-expanded="false" aria-controls="collapseRow2">
+              Read more &darr;
+            </a>
+            <div class="collapse" id="collapseRow2">
+             <ul className="list-unstyled">
+                                <li className="mb-2 ">
+                                    <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                                <li className="mb-2">
+                                    <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                </li>
+                            </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
       </div>
-      <div id="section3" style={{ height: '100vh', backgroundColor: '#dee2e6' }}>
+      <div id="section3" style={{backgroundColor: '#dee2e6' }}>
         <h1>Section 3</h1>
         <h5>এসএসসি 2025 ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ প্লাস নিশ্চিত করতে 
                     আমরা নিয়ে এসেছি এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
@@ -116,7 +185,7 @@ function ClassInfo() {
                     হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</h5>
       </div>
     </div>
-    <PopularCourse/>
+   
   </>
   )
 }

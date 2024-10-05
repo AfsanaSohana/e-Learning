@@ -29,8 +29,8 @@ const isLinkActive = (path) => {
                     গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
                     হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</h5>
                 </div>
-                <div className="col-md-4">
-                    <div className="card  p-3"> <button type="button" className="btn-close btn-outline-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div className="col-md-4 ">
+                    <div className="card  p-3 "> <button type="button" className="btn-close btn-outline-white" data-bs-dismiss="alert" aria-label="Close"></button>
                         {/* Video */}
                         <div className="embed-responsive embed-responsive-16by9 mb-1">
                             <iframe 
