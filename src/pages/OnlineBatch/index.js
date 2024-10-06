@@ -11,7 +11,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 
 
-function IctOnlineBatch() {
+function OnlineBatch() {
     const location = useLocation();
 const isLinkActive = (path) => {
     return location.pathname == path ? 'active':"";
@@ -44,4 +44,4 @@ const isLinkActive = (path) => {
   )
 }
 
-export default IctOnlineBatch
+export default OnlineBatch

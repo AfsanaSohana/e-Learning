@@ -2,7 +2,7 @@ import React from 'react'
 import OfferBanner from '../../layouts/include/OfferBanner'
 import { Link, useLocation} from 'react-router-dom';
 import Footer from '../../layouts/include/footer'
-import IctOnlineBatch from '../IctOnlineBatch';
+import IctOnlineBatch from '../OnlineBatch';
 function DemoClass1() {
 
 
@@ -28,7 +28,7 @@ function DemoClass1() {
     <button className="btn dropdown text-white" type="button" id="dropdownButton" data-bs-toggle="dropdown" aria-expanded="false" >
     <h2>HSC</h2>
     </button>
-      <ul className="dropdown-menu" aria-labelledby="dropdownButton">group
+      <ul className="dropdown-menu" aria-labelledby="dropdownButton">
       <li><a className="dropdown-item" href="#">Science</a></li>
         <li><a className="dropdown-item" href="#">Arts</a></li>
         <li><a className="dropdown-item" href="#">Commers</a></li>
@@ -52,7 +52,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/IctOnlineBatch " className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                         
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
@@ -64,7 +64,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/IctOnlineBatch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
@@ -78,7 +78,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/ict online batch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -89,7 +89,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/ict online batch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
@@ -103,7 +103,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/ict online batch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -114,7 +114,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/ict online batch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
@@ -128,7 +128,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/ict online batch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -139,7 +139,7 @@ function DemoClass1() {
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <Link to="/ict online batch" className="btn btn-primary d-block btn-box" >বিস্তারিত দেখুন</Link>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>

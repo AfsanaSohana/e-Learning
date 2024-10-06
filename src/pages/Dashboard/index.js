@@ -3,6 +3,7 @@ import AdminLayout from '../../layouts/AdminLayout'
 import Slider from '../Slider';
 import { Button, Modal } from 'react-bootstrap';
 import { Link, useLocation} from 'react-router-dom';
+import Form from '../Form';
 
 function Dashboard() {
 const [show, setShow] = useState(false);
@@ -65,6 +66,7 @@ const [show, setShow] = useState(false);
                                     <i className="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
                                     <h5 className="mb-3">এস এস সি, ২০২৫ এইস এইস এস সি২০২৫</h5>
                                     <p>সপ্তাহে ৬ দিন ক্লাস</p>
+
                                 </div>
                             </div>
                         </div>
@@ -83,6 +85,7 @@ const [show, setShow] = useState(false);
                                     <i className="fa fa-3x fa-home text-primary mb-4"></i>
                                     <h5 className="mb-3">বিসিএস সকল পার্টের প্রস্তুতি</h5>
                                     <p>সপ্তাহে ৬ দিন ক্লাস</p>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -108,7 +111,8 @@ const [show, setShow] = useState(false);
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-home text-primary mb-4"></i>
                                     <h5 className="mb-3">এস এস সি, ২০২৫ এইস এইস এস সি২০২৫</h5>
-                                    <p>অনলাইন ফ্রি লাইভ ক্লাস</p>
+                                    
+                                    <Link to="/Form" className="btn btn-outline-primar" >অনলাইন ফ্রি লাইভ ক্লাস</Link>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +121,7 @@ const [show, setShow] = useState(false);
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-book-open text-primary mb-4"></i>
                                     <h5 className="mb-3">৬ষ্ঠ-৯ম শ্রেণির সকাল বিষয়</h5>
-                                    <p>অনলাইন ফ্রি লাইভ ক্লাস</p>
+                                    <Link to="/Form" className="btn btn-outline-primar" >অনলাইন ফ্রি লাইভ ক্লাস</Link>
                                 </div>
                             </div>
                         </div>

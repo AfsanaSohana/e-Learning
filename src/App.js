@@ -7,7 +7,7 @@ import Slider from './pages/Slider';
 import './pages/SscHsc/style.css';
 import DemoClass1 from './pages/DemoClass1';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import IctOnlineBatch from './pages/IctOnlineBatch';
+import OnlineBatch from './pages/OnlineBatch';
 import ClassInfo from './pages/ClassInfo';
 import PopularCourse from './pages/PopularCourse';
 import SclClassInfo from './pages/ClassInfo/SclClassInfo';
@@ -23,7 +23,7 @@ function App() {
         <Route path="/SscHsc" element={<SscHsc />} />
         <Route path="/Form" element={<Form />} />
         <Route path="/DemoClass1" element={<DemoClass1 />} />
-        <Route path="/IctOnlineBatch" element={<IctOnlineBatch />} />
+        <Route path="/OnlineBatch" element={<OnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
         <Route path="//SclClassInfo" element={<SclClassInfo />} />
     
