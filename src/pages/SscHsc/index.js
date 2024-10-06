@@ -2,6 +2,10 @@ import React from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
 import OfferBanner from '../../layouts/include/OfferBanner';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link, useLocation} from 'react-router-dom';
+import SclClassInfo from '../ClassInfo/SclClassInfo';
+
 
 function SscHsc(){
     return(
@@ -22,7 +26,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary d-block btn-box">বিস্তারিত দখো</button>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -33,7 +37,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary btn-box">বিস্তারিত দখো</button>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
@@ -47,7 +51,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary d-block btn-box">বিস্তারিত দখো</button>
+                       <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -58,7 +62,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary btn-box">বিস্তারিত দখো</button>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
@@ -72,7 +76,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary d-block btn-box">বিস্তারিত দখো</button>
+                       <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -83,7 +87,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary btn-box">বিস্তারিত দখো</button>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
@@ -97,7 +101,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary d-block btn-box">বিস্তারিত দখো</button>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
                 </div>
@@ -108,7 +112,7 @@ function SscHsc(){
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
                         <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
-                        <button className="btn btn-primary btn-box">বিস্তারিত দখো</button>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>

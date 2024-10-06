@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link, useLocation} from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import PopularCourse from '../PopularCourse';
 
 
-function ClassInfo() {
+function SclClassInfo() {
   return (
-    <div className='row'>
+    <>
+   <div className='row'>
       <div className='col-8 p-3 '>
         <div className='row'>
           <div className='col-12'>
@@ -292,7 +292,8 @@ function ClassInfo() {
 
   
   </div>
+  </>
   )
 }
 
-export default ClassInfo
+export default SclClassInfo

@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IctOnlineBatch from './pages/IctOnlineBatch';
 import ClassInfo from './pages/ClassInfo';
 import PopularCourse from './pages/PopularCourse';
-
+import SclClassInfo from './pages/ClassInfo/SclClassInfo';
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
         <Route path="/DemoClass1" element={<DemoClass1 />} />
         <Route path="/IctOnlineBatch" element={<IctOnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
+        <Route path="//SclClassInfo" element={<SclClassInfo />} />
     
 
       </Routes>
