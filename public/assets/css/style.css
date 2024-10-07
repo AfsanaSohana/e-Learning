@@ -481,8 +481,7 @@
 
   
 .custom-div {
-    background-image: url('/assets/img/academic-background.jpg'); /* Replace with your image */
-    background-size: cover;
+    background-image: url('/assets/img/academic-background.jpg'); 
     background-position: center;
     height: 200px;
   }
@@ -491,7 +490,13 @@
     font-size: 1.5rem;
     padding-left: 20px;
   }
-
+.heading {
+font-size: 15px;
+}
+  
+.heading2 {
+font-size: 12px;
+}
  
 
   

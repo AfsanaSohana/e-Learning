@@ -44,14 +44,16 @@ function DemoClass1() {
 {/* list part */}
 
 <div className="container mt-5">
+    <h3><strong>অনলাইন ব্যাচ</strong></h3>
+    <p className='text-muted'>দেশের যেকোনো প্রান্ত থেকে ঘরে বসেই দেশ সেরা শিক্ষকদের সাথে নাও সম্পূর্ণ সিলেবাসের 💯 তে 💯 প্রস্তুতি!</p>
         {/* First Row */}
         <div className="row"> 
             <div className="col-md-6 d-flex justify-content-center">
-                <div className="box">
+                <div className="box borderRedius-3">
                     <div className="box-content">
-                        <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
+                        <h5 >HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                         
                     </div>
@@ -63,7 +65,7 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
@@ -77,7 +79,7 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
@@ -88,7 +90,7 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
@@ -102,7 +104,7 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
@@ -113,7 +115,7 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
@@ -127,7 +129,7 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
@@ -138,14 +140,138 @@ function DemoClass1() {
                     <div className="box-content">
                         <h5>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h5>
                         <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                        <p>প্রতি সপ্তাহে ১২টি লাইভ ক্লাস</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
                         <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                     </div>
                     <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 2"/>
                 </div>
             </div>
         </div>
-    </div>
+    </div>   
+{/*  */}
+ <div className="container  mt-5">
+    <h2><strong>রেকর্ডেড কোর্সসমূহ</strong></h2>
+    <h4><strong>ভর্তি পরীক্ষা প্রস্তুতি কোর্সসমূহ</strong></h4>
+    <p className='text-muted'>দেশের যেকোনো প্রান্ত থেকে ঘরে বসেই দেশ সেরা শিক্ষকদের সাথে নাও সম্পূর্ণ সিলেবাসের 💯 তে 💯 প্রস্তুতি!</p>
+        {/* First Row */}
+        <div className="row"> 
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="card box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p className='heading2'>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+        </div>
+        {/* row2 */}
+        <div className="row"> 
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p className='heading2'>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+        </div>
+        {/* row3 */}
+        <div className="row"> 
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p className='heading2'>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+            <div className="col-md-4 d-flex justify-content-center">
+                <div className="box borderRedius-3">
+                    <div className="box-content p-2">
+                        <h6 className='heading mt-1'>HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</h6>
+                        <p className='heading2'><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
+                        <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                        <Link to="/SclClassInfo" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+                        
+                    </div>
+                    <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Image 1"/>
+                </div>
+            </div>
+        </div>
+</div>   
+   
     <Footer/>
     </>
   )
