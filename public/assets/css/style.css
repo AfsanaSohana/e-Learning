@@ -534,7 +534,9 @@ font-size: 12px;
     align-items: flex-start;
     margin: 20px;
   }
- 
+ .card {
+max-width: 10cm;
+ }
   
   .left {
     flex: 1;
