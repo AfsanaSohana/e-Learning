@@ -7,7 +7,7 @@ function AdminLayout({children}) {
   return (
     <div id="app">
       <Header />
-        <div id="main" >    
+        <div id="main"  >    
             <main>{children}</main>
       <Footer />
         </div>

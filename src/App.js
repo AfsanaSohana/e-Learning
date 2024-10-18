@@ -11,6 +11,7 @@ import OnlineBatch from './pages/OnlineBatch';
 import ClassInfo from './pages/ClassInfo';
 import PopularCourse from './pages/PopularCourse';
 import SclClassInfo from './pages/ClassInfo/SclClassInfo';
+import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path="/OnlineBatch" element={<OnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
         <Route path="//SclClassInfo" element={<SclClassInfo />} />
+        <Route path="" element={<SclClassInfo />} />
+//OfferCourseInfo
     
 
       </Routes>
