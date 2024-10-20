@@ -12,6 +12,7 @@ import ClassInfo from './pages/ClassInfo';
 import PopularCourse from './pages/PopularCourse';
 import SclClassInfo from './pages/ClassInfo/SclClassInfo';
 import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
+import Certificate from './pages/certificate';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/ClassInfo" element={<ClassInfo />} />
         <Route path="//SclClassInfo" element={<SclClassInfo />} />
         <Route path="" element={<SclClassInfo />} />
+        <Route path="" element={<Certificate />} />
 //OfferCourseInfo
     
 
