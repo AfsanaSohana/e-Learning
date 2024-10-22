@@ -143,9 +143,13 @@ const [show, setShow] = useState(false);
                         </div>
                         <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                             <h6 className="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                            <h1 className="mb-4">Welcome to eLEARNING</h1>
-                            <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                            <p className="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <h1 className="mb-4">আমাদের উদ্দেশ্য</h1>
+                            <p className="mb-4">এসএসসি 2025 ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ প্লাস নিশ্চিত করতে 
+                    আমরা নিয়ে এসেছি এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
+                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
+                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
+                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</p>
+                           
                             <div className="row gy-2 gx-4 mb-4">
                                 <div className="col-sm-6">
                                     <p className="mb-0"><i className="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
@@ -245,7 +249,7 @@ const [show, setShow] = useState(false);
                                     </div>
                                 </div>
                                 <div className="text-center p-4 pb-0">
-                                    <h3 className="mb-0">$149.00</h3>
+                                    <h3 className="mb-0">৳ 1490</h3>
                                     <div className="mb-3">
                                         <small className="fa fa-star text-primary"></small>
                                         <small className="fa fa-star text-primary"></small>
@@ -257,7 +261,7 @@ const [show, setShow] = useState(false);
                                     <h5 className="mb-4">Web Design & Development Course for Beginners</h5>
                                 </div>
                                 <div className="d-flex border-top">
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>Sohana Afsana</small>
                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
                                     <small className="flex-fill text-center py-2"><i className="fa fa-user text-primary me-2"></i>30 Students</small>
                                 </div>
@@ -273,7 +277,7 @@ const [show, setShow] = useState(false);
                                     </div>
                                 </div>
                                 <div className="text-center p-4 pb-0">
-                                    <h3 className="mb-0">$149.00</h3>
+                                    <h3 className="mb-0">৳ 1490</h3>
                                     <div className="mb-3">
                                         <small className="fa fa-star text-primary"></small>
                                         <small className="fa fa-star text-primary"></small>
@@ -285,7 +289,7 @@ const [show, setShow] = useState(false);
                                     <h5 className="mb-4">Web Design & Development Course for Beginners</h5>
                                 </div>
                                 <div className="d-flex border-top">
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>Sohana Afsana</small>
                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
                                     <small className="flex-fill text-center py-2"><i className="fa fa-user text-primary me-2"></i>30 Students</small>
                                 </div>
@@ -301,7 +305,7 @@ const [show, setShow] = useState(false);
                                     </div>
                                 </div>
                                 <div className="text-center p-4 pb-0">
-                                    <h3 className="mb-0">$149.00</h3>
+                                    <h3 className="mb-0">৳ 1490</h3>
                                     <div className="mb-3">
                                         <small className="fa fa-star text-primary"></small>
                                         <small className="fa fa-star text-primary"></small>
@@ -313,7 +317,7 @@ const [show, setShow] = useState(false);
                                     <h5 className="mb-4">Web Design & Development Course for Beginners</h5>
                                 </div>
                                 <div className="d-flex border-top">
-                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                                    <small className="flex-fill text-center border-end py-2"><i className="fa fa-user-tie text-primary me-2"></i>Sohana Afsana</small>
                                     <small className="flex-fill text-center border-end py-2"><i className="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
                                     <small className="flex-fill text-center py-2"><i className="fa fa-user text-primary me-2"></i>30 Students</small>
                                 </div>
@@ -415,40 +419,52 @@ const [show, setShow] = useState(false);
             <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div className="container">
                     <div className="text-center">
-                        <h6 className="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                        <h1 className="mb-5">Our Students Say!</h1>
+                        {/* <h6 className="section-title bg-white text-center text-primary px-3">Testimonial</h6> */}
+                        <h1 className="mb-5">আমাদের শীক্ষার্থী কি বলে</h1>
                     </div>
                     <div className="owl-carousel testimonial-carousel position-relative">
                         <div className="testimonial-item text-center">
                             <img className="border rounded-circle p-2 mx-auto mb-3" src="/assets/img/testimonial-1.jpg" style={{ width: "80px", height: "80px" }} />
-                            <h5 className="mb-0">Client Name</h5>
+                            <h5 className="mb-0">সোহানা আফসানা</h5>
                             <p>Profession</p>
                             <div className="testimonial-text bg-light text-center p-4">
-                                <p className="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                                <p className="mb-0"> এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
+                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
+                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
+                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</p>
                             </div>
                         </div>
                         <div className="testimonial-item text-center">
                             <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style={{ width: "80px", height: "80px" }} />
-                            <h5 className="mb-0">Client Name</h5>
+                            <h5 className="mb-0">সোহানা আফসানা</h5>
                             <p>Profession</p>
                             <div className="testimonial-text bg-light text-center p-4">
-                                <p className="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                                <p className="mb-0">এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
+                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
+                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
+                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</p>
                             </div>
                         </div>
                         <div className="testimonial-item text-center">
                             <img className="border rounded-circle p-2 mx-auto mb-3" src="/assets/img/testimonial-3.jpg" style={{ width: "80px", height: "80px" }} />
-                            <h5 className="mb-0">Client Name</h5>
+                            <h5 className="mb-0">সোহানা আফসানা</h5>
                             <p>Profession</p>
                             <div className="testimonial-text bg-light text-center p-4">
-                                <p className="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                                <p className="mb-0">এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
+                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
+                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
+                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</p>
                             </div>
                         </div>
                         <div className="testimonial-item text-center">
                             <img className="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style={{ width: "80px", height: "80px" }} />
-                            <h5 className="mb-0">Client Name</h5>
+                            <h5 className="mb-0">সোহানা আফসানা</h5>
                             <p>Profession</p>
                             <div className="testimonial-text bg-light text-center p-4">
-                                <p className="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                                <p className="mb-0">এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 
+                    লেকচার শিট, ডেইলি, উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট ও বিজ্ঞান টিচারদের 
+                    গাইড লাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা। কোর্সটি মাসে ৭ দিন
+                    হলেও এক্সাম থাকবে এইচএসসি পরীক্ষা পর্যন্ত।</p>
                             </div>
                         </div>
                     </div>
