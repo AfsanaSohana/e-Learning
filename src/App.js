@@ -13,6 +13,8 @@ import PopularCourse from './pages/PopularCourse';
 import SclClassInfo from './pages/ClassInfo/SclClassInfo';
 import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
 import Certificate from './pages/certificate';
+import Instructor from './pages/Instructor';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
          <Route path="/Slider" element={<Slider />} />
          <Route path="/PopularCourse" element={<PopularCourse/>} />
         <Route path="/Skill" element={<Skill />} />
+        <Route path="/Instructor" element={<Instructor />} />
         <Route path="/SscHsc" element={<SscHsc />} />
         <Route path="/Form" element={<Form />} />
         <Route path="/DemoClass1" element={<DemoClass1 />} />
@@ -29,10 +32,9 @@ function App() {
         <Route path="/ClassInfo" element={<ClassInfo />} />
         <Route path="//SclClassInfo" element={<SclClassInfo />} />
         <Route path="" element={<SclClassInfo />} />
-        <Route path="" element={<Certificate />} />
-//OfferCourseInfo
-    
-
+        <Route path="/Certificate" element={<Certificate />} />
+        <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />
+       
       </Routes>
     </BrowserRouter>
   );
