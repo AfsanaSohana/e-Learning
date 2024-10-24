@@ -16,10 +16,10 @@ function Form() {
               
            {/* form */}
            
-            <div className='container card col-5 p-3 ps-4 pe-4 d'contentJustify='center'style={{backgroundColor: '#cce6ff',borderRadius:'3' }}>
+            <div className='container card col-4 p-3 ps-4 pe-3 d mt-4'contentJustify='center'style={{backgroundColor: '#cce6ff',borderRadius:'3' }}>
                 <strong><h5 className='text-align-center text-primary'>অনলাইন ফ্রি লাইভ ক্লাসে প্রবেশ করুন</h5></strong>
                  <form  >
-                    <div className='row'>
+                    <div className='row '>
                         <div className='col-12'>
                             <label htmlFor="name" className="form-label">নাম </label>
                             <div className='row card border-primary'onClick={handleShow}>
@@ -54,7 +54,7 @@ function Form() {
                                 <input type="password" className="form-control col-12" id="password" placeholder="আইডি নম্বর" />
                                 </div>
                             </div>
-                                <div className='col-12 mt-3'onClick={handleShow}>
+                                <div className='col-10 mt-3'onClick={handleShow}>
                                 <button type="submit" className="btn btn-primary col-12">প্রবেশ করুন</button>
                                 </div>        
                         </div>        
