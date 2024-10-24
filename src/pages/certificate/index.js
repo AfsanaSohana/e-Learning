@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
 import { Button, Modal } from 'react-bootstrap';
-import { Link, useLocation} from 'react-router-dom';
+import { Link,} from 'react-router-dom';
 
 function Certificate() {
     return (
