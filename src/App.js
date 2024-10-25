@@ -14,6 +14,7 @@ import SclClassInfo from './pages/ClassInfo/SclClassInfo';
 import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
 import Certificate from './pages/certificate';
 import Instructor from './pages/Instructor';
+import QuizTest from './pages/QuizTest';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
         <Route path="" element={<SclClassInfo />} />
         <Route path="/Certificate" element={<Certificate />} />
         <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />
+        <Route path="/QuizTest" element={<QuizTest />} />
        
       </Routes>
     </BrowserRouter>

@@ -1,16 +1,17 @@
-import React,{useState,useNavigate,useParams} from 'react'
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import AdminLayout from '../../layouts/AdminLayout'
-import { Button, Modal } from 'react-bootstrap';
-import { Link, useLocation} from 'react-router-dom';
+import { Button} from 'react-bootstrap';
+import { Link, useNavigate,useParams} from 'react-router-dom';
 import DemoClass1 from '../DemoClass1';
+
 function Form() {
     const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [inputs, setInputs] = useState({id:'',batch_id:'',course_id:'',student_id:'',enroll_date:'',fees:''});
+  const [inputs, setInputs] = useState({id:'',batch_id:'',course_id:'',student_id:'', status:'',enroll_date:'',fees:''});
   const [batch, setBatch] = useState([]);
   const [course, setCourse] = useState([]);
   const [student, setStudent] = useState([]);
@@ -90,26 +91,45 @@ function Form() {
                             <label htmlFor="name" className="form-label">নাম </label>
                             <div className='row card border-primary'onClick={handleShow}>
 
-                                    <input type="text" className="form-control" id="batch_id"defaultValue={inputs.batch_id} name="batch_id" onChange={handleChange} placeholder="সোহানা আফসানা" />
+                                    <input type="text" className="form-control" id="student_id"defaultValue={inputs.student_id} name="student_id" onChange={handleChange} placeholder="সোহানা আফসানা" />
                             </div>
                             
                             <label class="col-12-form-label mb-2 mt-2">আপনি একজন </label>
-                            <div className='row card border-primary mb-3'>  
-                                <div className='col-12 'onClick={handleShow}>
-                                    <input class="form-check-input " type="radio" name="identity" id="student" value="student"/>শীক্ষার্থী
-                                </div>
-                            </div>
+                            {/* <div className='row card border-primary mb-3'>  
+                            <label htmlFor="subject_id">Subject</label>
+                                                    {.length > 0 ? (
+                                                        <select id="status" className="form-control"
+                                                            value={inputs.status} name="status" onChange={handleChange}>
+                                                            <option value="">শীক্ষার্থী</option>
+                                                            <option value="">অবিভাবক</option>
+                                                           
+                                                        </select>
+                                                    ) : (
+                                                        <p>Loading subjects...</p>
+                                                    )}
+                            </div> */}
 
                             <div className='row card border-primary'>
-                                <div className='col-12 'onClick={handleShow}>
-                                    <input class="form-check-input b" type="radio" name="identity" id="guirdian" value="guirdian"/>অবিভাবক
+                                <div className='col-12 p-1 'onClick={handleShow}>
+                                    <input class="form-check-input b" type="radio" name="identity" id="student" value="student"/>  শীক্ষার্থী
+                                </div>
+                            </div>
+                            <div className='row card border-primary mt-3'>
+                                <div className='col-12 p-1'onClick={handleShow}>
+                                    <input class="form-check-input b" type="radio" name="identity" id="guirdian" value="guirdian"/>  অবিভাবক
                                 </div>
                             </div>
 
-                            <label htmlFor="email" className="form-label mt-2">শ্রেণি</label>
+                            <label htmlFor="email" className="form-label mt-2">শ্রেণি/</label>
                             <div className='row card border-primary'>
                                 <div className='col-12 p-0'onClick={handleShow}>
-                                <input type="email" className="form-control" id="email"  placeholder="৬ষ্ঠ"/>
+                                <input type="text" className="form-control" id="class_name" name="class_name"  placeholder="৬ষ্ঠ"/>
+                                </div>
+                            </div>
+                            <label htmlFor="email" className="form-label mt-2">ইমেইল</label>
+                            <div className='row card border-primary'>
+                                <div className='col-12 p-0'onClick={handleShow}>
+                                <input type="text" className="form-control" id="email"  placeholder="৬ষ্ঠ"/>
                                 </div>
                             </div>
 
