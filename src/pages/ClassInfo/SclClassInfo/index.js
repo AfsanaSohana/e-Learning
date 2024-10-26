@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation} from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import FormJoin from '../../FormJoin';
 
 
 function SclClassInfo() {
@@ -274,7 +275,7 @@ function SclClassInfo() {
                   <p className="card-text">
                   কোর্স ফি: <strong>৳1500</strong><span><p><s>৳3500</s></p></span>
                   </p>
-                  <button className="btn btn-primary">কোর্সটি কিনুন</button>
+                  <Link to="/FormJoin" className="btn btn-primary">কোর্সটি কিনুন</Link>
 
                   <ul className="list-unstyled">
                       <li className="mb-2 ">

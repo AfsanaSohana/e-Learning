@@ -15,6 +15,7 @@ import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
 import Certificate from './pages/certificate';
 import Instructor from './pages/Instructor';
 import QuizTest from './pages/QuizTest';
+import FormJoin from './pages/FormJoin';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Certificate" element={<Certificate />} />
         <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />
         <Route path="/QuizTest" element={<QuizTest />} />
+        <Route path="/FormJoin" element={<FormJoin />} />
        
       </Routes>
     </BrowserRouter>
