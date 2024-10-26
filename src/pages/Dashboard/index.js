@@ -25,27 +25,27 @@ const [show, setShow] = useState(false);
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
             <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
             
-            <Link to="/DemoClass1" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+            <Link to="/DemoClass1" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
           </div>
 
           {/* List Box 2 */}
           <div className="list-box">
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
             <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 2"/>
-            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+            <Link to="/SscHsc" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
           </div>
 
           {/* List Box 3 */}
           <div className="list-box">
             <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
             <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
-            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+            <Link to="/SscHsc" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
           </div>
           {/* List Box 4 */}
           <div className="list-box">
             <div className="text-left">HSC 26 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
-            <img src="public/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
-            <Link to="/SscHsc" className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
+            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
+            <Link to="/SscHsc" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
           </div>
 </Modal.Body>
         <Modal.Footer>

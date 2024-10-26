@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link, useLocation} from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import AdminLayout from '../../../layouts/AdminLayout';
 
 
 
 function OfferCourseInfo() {
   return (
     <>
+    <AdminLayout>
     <div className='gradiant-background p-3'>
     <p>অন্যান্য বিষয়ের দক্ষতা থাকলেও, তথ্য ও যোগাযোগ প্রযুক্তি বা আইসিটি বিষয়ের টপিক অনেকেরই বুঝতে সমস্যা হয়। সারাবছর অন্যান্য বিষয়গুলোতে সময় দেওয়া হলেও, আইসিটি বিষয়ে দেখা যায় সবার উদাসীনতা। ফলস্বরুপ, এইচএসসিতে এ+ মিস করে অনেকে! 
 
@@ -303,6 +305,7 @@ function OfferCourseInfo() {
 
   
   </div>
+  </AdminLayout>
   
   </>
   )

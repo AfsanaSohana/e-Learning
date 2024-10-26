@@ -3,10 +3,12 @@ import { Link, useLocation} from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import PopularCourse from '../PopularCourse';
 import FormJoin from '../FormJoin';
+import AdminLayout from '../../layouts/AdminLayout';
 
 
 function ClassInfo() {
   return (
+    <AdminLayout>
   <div>
     <div className='row'>
       <div className='col-8 p-3 '>
@@ -296,6 +298,7 @@ function ClassInfo() {
   
     </div>
   </div>
+  </AdminLayout>
   )
 }
 

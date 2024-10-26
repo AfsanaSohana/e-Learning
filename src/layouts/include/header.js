@@ -80,7 +80,8 @@ function Header() {
                     
                     <Link to={"/Skill"} href="contact.html" className="nav-item nav-link">ভর্তি পরীক্ষা</Link>
                 </div>
-                <a href="" className="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i className="fa fa-arrow-right ms-3"></i></a>
+                <Link to={"/StudentForm"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>
+                
             </div>
         </nav>
     )
