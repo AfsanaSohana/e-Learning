@@ -17,7 +17,7 @@ import Instructor from './pages/Instructor';
 import QuizTest from './pages/QuizTest';
 import FormJoin from './pages/FormJoin';
 import StudentForm from './pages/StudentForm';
-
+import CourseInterface from './pages/CourseInterface';
 
 function App() {
   return (
@@ -40,6 +40,7 @@ function App() {
         <Route path="/QuizTest" element={<QuizTest />} />
         <Route path="/FormJoin" element={<FormJoin />} />
         <Route path="/StudentForm" element={<StudentForm />} />
+        <Route path="/CourseInterface" element={<CourseInterface />} />
        
       </Routes>
     </BrowserRouter>

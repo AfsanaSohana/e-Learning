@@ -1,4 +1,5 @@
 /********** Template CSS **********/
+
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;
@@ -616,3 +617,23 @@ max-width: 10cm;
     border-top: 1px solid #000;
     text-align: center;
 }
+/* courseinterface */
+.overlay {
+    background-color: rgba(36, 36, 36, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+.course-dashboard {
+    background-image: url('/assets/img/bluebg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
