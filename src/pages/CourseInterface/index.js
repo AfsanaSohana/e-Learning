@@ -20,10 +20,10 @@ function CourseInterface() {
   
 
   <AdminLayout>
-    <div className="course-dashboard">
-      <div className="overlay"></div>
+    <div className="course-dashboard ">
+      <div className="overlay "></div>
 
-      <div className="container mt-5">
+      <div className="container ">
         {/* Header */}
         <div className="row mb-4">
           <div className="col-12">
@@ -44,7 +44,7 @@ function CourseInterface() {
                 </div>
                 <div className="card-body">
                     <p>
-                    <strong>New Lecture Added:</strong> A new lecture on Bootstrap has been added. Check it out in Module
+                    <strong>New Lecture Added:</strong> Check it out in Module
                     2.
                     </p>
                     <p>
@@ -54,11 +54,11 @@ function CourseInterface() {
             </div>
            
         </div>
-        <div className="row">
+      <div className="row">
           {/* Course Modules */}
-           <div className="col-lg-6 mb-4">
+           <div className="col-lg-6 mb-2 ">
                 {/* row1 */}
-                <div className='row'>
+                <div className='row p-2'>
                 <div className="card">
                 <div className="card-header">
                     <h5>Course Modules</h5>
@@ -73,7 +73,7 @@ function CourseInterface() {
                 </div>
                 </div>
                 {/* row2 */}
-                <div className='row mt-3'>
+                <div className='row mt-2 p-2'>
                     <div className="card">
                     <div className="card-header">
                         <h5>Upcoming Tasks & Deadlines</h5>
@@ -121,35 +121,26 @@ function CourseInterface() {
                 
           </div>
            {/* Live Class Section */}
-           <div className='col-6 me-1'>
+           <div className='col-6  d-flex'>
             {/* row */}
-            <div className="row">
-                    <div className="card">
-                        <div className="card-header">
-                        <h5>Live Class</h5>
-                        </div>
-                        <div className="card-body">
-                        <p>Join our next live class session below:</p>
-                        <button className="btn btn-primary" onClick={handleJoinLiveClass}>
-                            Join Live Class
-                        </button>
-                        </div>
-                    </div>
-                 {/* row */}  
-                 <div className="row">
-                    <div className="col-lg-12 d-flex justify-content-center">
-                        <button className="btn btn-info me-2">Contact Instructor</button>
-                        <button className="btn btn-warning me-2">Save Progress</button>
-                        <button className="btn btn-danger">Logout</button>
-                    </div>
-                 </div>
+              <div className="row ">
+                      <div className="card mt-2" style={{ height: '500px', width: '660px' }}>
+                          <div className="card-header">
+                          <h5>Live Class</h5>
+                          </div>
+                          <div className="card-body">
+                          <p>Join our next live class session below:</p>
+                          <button className="btn btn-primary" onClick={handleJoinLiveClass}>
+                              Join Live Class
+                          </button>
+                          </div>
+                      </div>
+                  
+            </div>
            </div>
-        </div>
-
-
-
+      <div className="row ">
           {/* Discussion Forum */}
-          <div className="col-lg-6 mb-4">
+
             <div className="card">
               <div className="card-header">
                 <h5>Discussion Forum</h5>
@@ -168,41 +159,25 @@ function CourseInterface() {
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Class Resources */}
-        <div className="row">
-          <div className="col-12 mb-4">
-            <div className="card">
-              <div className="card-header">
-                <h5>Class Resources</h5>
-              </div>
-              <div className="card-body">
-                <ul className="list-group">
-                  <li className="list-group-item">
-                    <a href="#">Lecture Notes - Module 1</a>
-                  </li>
-                  <li className="list-group-item">
-                    <a href="#">Assignment Instructions</a>
-                  </li>
-                  <li className="list-group-item">
-                    <a href="#">External Resources for Further Reading</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+     
+ 
+      </div>
+     
 
         {/* Buttons at the end of the row */}
+         {/* row */}  
+                 <div className="row p-2 bg-whit mb-3" style={{ height: '20px' }}>
+                    <div className="col-lg-12 d-flex justify-content-center">
+                        <button className="btn btn-info me-2">Contact Instructor</button>
+                        <button className="btn btn-warning me-2">Save Progress</button>
+                        <button className="btn btn-danger">Logout</button>
+                    </div>
+                 </div>
         
     </div>
+    </div>
     </AdminLayout>
-
-
-
-
 
 )};
 export default CourseInterface
