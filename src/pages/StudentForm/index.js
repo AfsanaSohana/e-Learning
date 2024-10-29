@@ -1,75 +1,40 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../../components/axios';
 import AdminLayout from '../../layouts/AdminLayout';
 import { useNavigate } from 'react-router-dom';
 import {useParams} from "react-router-dom";
 
 const StudentForm = () => {
-    const [inputs, setInputs] = useState({id:'',student_name:'',email:'',address:'',contact_number:'',photo:'',password:''});
-    const [selectedfile, setSelectedFile] = useState([]);
-  const navigate=useNavigate();
-
-  const {id} = useParams();
+  const [inputs, setInputs] = useState({id:'',student_name:'',email:'',address:'',contact_number:'',photo:'',password:''});
+  const [selectedfile, setSelectedFile] = useState([]);
   
-  function getDatas(){
-      axios.get(`${process.env.REACT_APP_API_URL}/student/${id}`).then(function(response) {
-          setInputs(response.data.data);
-      });
-  }
-
-  useEffect(() => {
-      if(id){
-          getDatas();
-      }
-  }, []);
-
   const handleChange = (event) => {
       const name = event.target.name;
       const value = event.target.value;
       setInputs(values => ({...values, [name]: value}));
   }
 
-  // const handleSubmit = async(e) => {
-  //     e.preventDefault();
-  //     console.log(inputs)
-  
-
-      const handelFile = (e) => {
-          setSelectedFile(e.target.files)
-      }
-      const handleSubmit = async (e) => {
-          e.preventDefault();
-  
-          const inputs = new FormData();
-  
-          for (let i = 0; i < selectedfile.length; i++) {
-              inputs.append('files[]', selectedfile[i])
-          }
-  
-          for (const property in inputs) {
-              inputs.append(property, inputs[property])
-          }
+  const handelFile = (e) => {
+    setSelectedFile(e.target.files)
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formdata = new FormData();
+    for (let i = 0; i < selectedfile.length; i++) {
+      formdata.append('files[]', selectedfile[i])
+    }
+    for (const property in inputs) {
+      formdata.append(property, inputs[property])
+    }
+    try{
+      let apiurl=`/student/create`;
+      let response = await axios.post(apiurl, formdata)
       
-      try{
-          let apiurl='';
-          if(inputs.id!=''){
-              apiurl=`/student/edit/${inputs.id}`;
-          }else{
-              apiurl=`/Student/create`;
-          }
-          
-          let response= await axios({
-              method: 'post',
-              responsiveTYpe: 'json',
-              url: `${process.env.REACT_APP_API_URL}${apiurl,inputs}`,
-              data: inputs
-          });
-          console.log(response)
-          navigate('/student')
-      } 
-      catch(e){
-          console.log(e);
-      }
+      console.log(response)
+      //navigate('/student')
+    }catch(e){
+      console.log(e);
+    }
   }
   return (
     <AdminLayout>
@@ -86,6 +51,11 @@ const StudentForm = () => {
             </div>
 
             <div className="mb-3">
+              <label htmlFor="email" className="form-label text-primary">Contact Number</label>
+              <input type="text" className="form-control" id="contact_number" name="contact_number"
+                defaultValue={inputs.contact_number} onChange={handleChange} placeholder="Enter student's contact number"/>
+            </div>
+            <div className="mb-3">
               <label htmlFor="email" className="form-label text-primary">Email</label>
               <input type="email" className="form-control" id="email" name="email"
                 defaultValue={inputs.email} onChange={handleChange} placeholder="Enter student's email"/>
@@ -99,7 +69,7 @@ const StudentForm = () => {
 
             <div className="mb-3">
               <label htmlFor="photo" className="form-label text-primary"> Photo</label>
-              <input type="file" className="form-control" id="photo" name="photo"  multiple defaultValue={inputs.photo} onChange={handleChange}/>
+              <input type="file" className="form-control" id="photo" name="photo"  multiple defaultValue={inputs.photo} onChange={handelFile}/>
             </div>
 
             <div className="mb-3">

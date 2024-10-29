@@ -1,23 +1,33 @@
-import React from 'react'
-import { Link, useLocation} from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import FormJoin from '../../FormJoin';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link} from 'react-router-dom';
 import AdminLayout from '../../../layouts/AdminLayout';
-
+import {useParams} from "react-router-dom";
 
 function SclClassInfo() {
+  let userdata=JSON.parse(localStorage.getItem("userdata"));
+  const [data, setdata] = useState([])
+  const {id} = useParams();
+  function getDatas(){
+    axios.get(`${process.env.REACT_APP_API_URL}/batch/${id}`).then(function(response) {
+      setdata(response.data.data);
+    });
+  }
+
+  useEffect(() => {
+      if(id){
+          getDatas();
+      }
+  }, []);
+
   return (
     <>
     <AdminLayout>
     <div className='gradiant-background p-3'>
-    <p>অন্যান্য বিষয়ের দক্ষতা থাকলেও, তথ্য ও যোগাযোগ প্রযুক্তি বা আইসিটি বিষয়ের টপিক অনেকেরই বুঝতে সমস্যা হয়। সারাবছর অন্যান্য বিষয়গুলোতে সময় দেওয়া হলেও, আইসিটি বিষয়ে দেখা যায় সবার উদাসীনতা। ফলস্বরুপ, এইচএসসিতে এ+ মিস করে অনেকে! 
-
-এইচএসসি ২০২৫ ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ+ নিশ্চিত করতে টেন মিনিট স্কুল নিয়ে এসেছে “HSC 25 অনলাইন ব্যাচ - ICT” কোর্স। লাইভ ক্লাস, লেকচার শিট, ডেইলি ও উইকলি এক্সাম, পূর্ণাঙ্গ মডেল টেস্ট এবং অভিজ্ঞ টিচারদের গাইডলাইনে তোমাদের সেরা প্রস্তুতি নিশ্চিত করবো আমরা! কোর্সটির ক্লাস ৭ মাস হলেও এক্সেস থাকবে এইচএসসি পরীক্ষা পর্যন্ত, তাই রিভিশনেও ঝামেলা নেই! তাই দেরি না করে আজই জয়েন করো “HSC 25 অনলাইন ব্যাচ - ICT” কোর্সে </p>
-<div className='right image'>
-<img src="/assets/img/teacher1.png" alt="Image 2" height={200} width={400}/>
-
-</div>
-
+      <p>{data.batch_details}</p>
+      <div className='right image'>
+      <img src="/assets/img/teacher1.png" alt="Image 2" height={200} width={400}/>
+      </div>
     </div>
    <div className='row'>
       <div className='col-8 p-3 '>
@@ -31,27 +41,20 @@ function SclClassInfo() {
 
         <table className="table table-bordered p-3">
               <thead>
-                  <tr>
-                      <th>বিকাল ৪ টা</th>
-                      <th>দিন</th>
-                    
-                    
-                  </tr>
+                <tr>
+                  <th>বিকাল ৪ টা</th>
+                  <th>দিন</th>
+                </tr>
               </thead>
               <tbody>
-                  <tr>
-                      <td className="table-primary">সাপ্তাহিক ছুটি</td>
-                      <td className="table-secondary">শনিবার</td>
-                      
-                      
-                      
-                  </tr>
-                  <tr>
-                      <td className="time-column">সাপ্তাহিক ছুটি</td>
-                      <td className="subject">রবিবার</td>
-                      
-                      
-                  </tr>
+                <tr>
+                  <td className="table-primary">সাপ্তাহিক ছুটি</td>
+                  <td className="table-secondary">শনিবার</td>
+                </tr>
+                <tr>
+                  <td className="time-column">সাপ্তাহিক ছুটি</td>
+                  <td className="subject">রবিবার</td>
+                </tr>
                   <tr>
                       <td className="time-column">সাপ্তাহিক ছুটি</td>
                       <td className="table-secondary">সোমবার</td>
@@ -277,7 +280,10 @@ function SclClassInfo() {
                   <p className="card-text">
                   কোর্স ফি: <strong>৳1500</strong><span><p><s>৳3500</s></p></span>
                   </p>
-                  <Link to="/FormJoin" className="btn btn-primary">কোর্সটি কিনুন</Link>
+                  {userdata
+                     ? <Link to={`/FormJoin/${id}`} className="btn btn-primary">কোর্সটি কিনুন</Link>
+                    : <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
+                  
 
                   <ul className="list-unstyled">
                       <li className="mb-2 ">

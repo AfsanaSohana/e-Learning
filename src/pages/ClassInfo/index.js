@@ -1,157 +1,177 @@
-import React from 'react'
-import { Link, useLocation} from 'react-router-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import PopularCourse from '../PopularCourse';
-import FormJoin from '../FormJoin';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link} from 'react-router-dom';
 import AdminLayout from '../../layouts/AdminLayout';
-
+import {useParams} from "react-router-dom";
 
 function ClassInfo() {
+  let userdata=JSON.parse(localStorage.getItem("userdata"));
+  const [data, setdata] = useState([])
+
+  const[batchData, setBatchData]=useState([]);
+    const[routineData, setRoutineData]=useState([]);
+  const {id} = useParams();
+  function getDatas(){
+    axios.get(`${process.env.REACT_APP_API_URL}/batch/${id}`).then(function(response) {
+      setdata(response.data.data);
+    });
+    axios.get(`${process.env.REACT_APP_API_URL}/routine/${id}`).then(function(response) {
+      setdata(response.data.data);
+    });
+  }
+
+  useEffect(() => {
+      if(id){
+          getDatas();
+      }
+  }, []);
+
   return (
+    <>
     <AdminLayout>
-  <div>
-    <div className='row'>
+    <div className='gradiant-background p-3'>
+      <p>{data.batch_details}</p>
+      <div className='right image'>
+      <img src="/assets/img/teacher1.png" alt="Image 2" height={200} width={400}/>
+      </div>
+    </div>
+   <div className='row'>
       <div className='col-8 p-3 '>
         <div className='row'>
           <div className='col-12'>
 
-              {/* Sections */}
-              {/* class routine */}
-              <div className="p-2" id="section1 content-align-center " style={{ backgroundColor: '#f8f9fa', borderRadius:'3' }}>
-              <h3>ক্লাস রুটিন</h3>
+        {/* Sections */}
+        {/* class routine */}
+        <div className="p-2" id="section1 content-align-center " style={{ backgroundColor: '#f8f9fa', borderRadius:'3' }}>
+        <h3>ক্লাস রুটিন</h3>
 
-              <table className="table table-bordered p-3">
-                    <thead>
-                        <tr>
-                            <th>বিকাল ৪ টা</th>
-                            <th>দিন</th>
-                          
-                          
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td className="table-primary">সাপ্তাহিক ছুটি</td>
-                            <td className="table-secondary">শনিবার</td>
-                            
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td className="time-column">সাপ্তাহিক ছুটি</td>
-                            <td className="subject">রবিবার</td>
-                            
-                            
-                        </tr>
-                        <tr>
-                            <td className="time-column">সাপ্তাহিক ছুটি</td>
-                            <td className="table-secondary">সোমবার</td>
-                          
-                            
-                        </tr>
-                        <tr>
-                            <td className="time-column">সাপ্তাহিক ছুটি</td>
-                            <td className="subject">মঙ্গলবার</td>
-                        
-                            
-                        </tr>
-                        <tr>
-                            <td className="time-column">ICT</td>
-                            <td className="table-success">বুধবার</td>
-                          
-                          
-                        </tr>
-                        <tr>
-                            <td className="time-column">সাপ্তাহিক ছুটি</td>
-                            <td className="table-primary">বৃহস্পতিবার</td>
-                            
-                          
-                        </tr>
-                        <tr>
-                            <td className="time-column">সাপ্তাহিক ছুটি</td>
-                            <td className="table-primary">শুক্রবার</td>
-                          
-                          
-                        </tr>
-                      
-                    </tbody>
-              </table>
-              </div>
-              {/* sylabus */}
-              <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
-                <h3 className='mt-2'>কোর্স সিলেবাস</h3>
-                <div class="container mt-4 p-2">
-            <table class="table table-bordered">
+        <table className="table table-bordered p-3">
+              <thead>
+                <tr>
+                  <th>সময়</th>
+                  <th>দিন</th>
+                </tr>
+              </thead>
               <tbody>
-                {/* <!-- Row 1 --> */}
+              {routineData && routineData.map((d, key) =>
                 <tr>
-                  <td>
-                    <p> ICT সিলেবাস</p>
-                    <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
-                      &darr;
-                    </a>
-                    <div class="collapse" id="collapseRow1">
-                                    <ul className="list-unstyled">
-                                        <li className="mb-2 ">
-                                            <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                    </ul>
-                    </div>
-                  </td>
+                  <td className="table-primary">{data.start_time}:{data.note}</td>
+                  <td className="table-secondary">{data.day_name}</td>
                 </tr>
-                {/* <!-- Row 2 --> */}
-                <tr>
-                  <td>
-                    <p>মডেল টেস্ট</p>
-                    <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow2" role="button" aria-expanded="false" aria-controls="collapseRow2">
-                      &darr;
-                    </a>
-                    <div class="collapse" id="collapseRow2">
-                    <ul className="list-unstyled">
-                                        <li className="mb-2 ">
-                                            <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                        <li className="mb-2">
-                                            <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                            <p className='text-muted'>5 টি ভিডিও</p>
-                                        </li>
-                                    </ul>
-                    </div>
-                  </td>
+                )}
+                {/* <tr>
+                  <td className="time-column">সাপ্তাহিক ছুটি</td>
+                  <td className="subject">রবিবার</td>
                 </tr>
+                  <tr>
+                      <td className="time-column">সাপ্তাহিক ছুটি</td>
+                      <td className="table-secondary">সোমবার</td>
+                    
+                      
+                  </tr>
+                  <tr>
+                      <td className="time-column">সাপ্তাহিক ছুটি</td>
+                      <td className="subject">মঙ্গলবার</td>
+                  
+                      
+                  </tr>
+                  <tr>
+                      <td className="time-column">ICT</td>
+                      <td className="table-success">বুধবার</td>
+                    
+                    
+                  </tr>
+                  <tr>
+                      <td className="time-column">সাপ্তাহিক ছুটি</td>
+                      <td className="table-primary">বৃহস্পতিবার</td>
+                      
+                    
+                  </tr>
+                  <tr>
+                      <td className="time-column">সাপ্তাহিক ছুটি</td>
+                      <td className="table-primary">শুক্রবার</td>
+                    
+                    
+                  </tr> */}
+                
               </tbody>
-            </table>
-          </div>
+        </table>
+        </div>
+        {/* sylabus */}
+        <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
+          <h3 className='mt-2'>কোর্স সিলেবাস</h3>
+          <div class="container mt-4 p-2">
+      <table class="table table-bordered">
+        <tbody>
+          {/* <!-- Row 1 --> */}
+          <tr>
+            <td>
+              <p>{data.Subject_id} সিলেবাস</p>
+              <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
+                &darr;
+              </a>
+              <div class="collapse" id="collapseRow1">
+                              <ul className="list-unstyled">
+                                  <li className="mb-2 ">
+                                      <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                              </ul>
+              </div>
+            </td>
+          </tr>
+          {/* <!-- Row 2 --> */}
+          <tr>
+            <td>
+              <p>মডেল টেস্ট</p>
+              <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow2" role="button" aria-expanded="false" aria-controls="collapseRow2">
+                &darr;
+              </a>
+              <div class="collapse" id="collapseRow2">
+              <ul className="list-unstyled">
+                                  <li className="mb-2 ">
+                                      <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                                  <li className="mb-2">
+                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
+                                      <p className='text-muted'>5 টি ভিডিও</p>
+                                  </li>
+                              </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
         </div>
         <div  className ='mt-3 p-3'id="section3 " style={{backgroundColor: '#dee2e6', borderRadius:'3' }}>
           <h3 >কোর্স ইন্সট্রাক্টর</h3> 
@@ -251,7 +271,7 @@ function ClassInfo() {
       </div>
       
         <div className="col-md-4 ">
-          <div  style={{position:"sticky",top:"20px"}} className="card  p-3 "> 
+          <div  style={{position:"sticky",top:"100px"}} className="card  p-3 "> 
               {/* Video */}
               <div className="embed-responsive embed-responsive-16by9 mb-1">
                   <iframe 
@@ -268,8 +288,10 @@ function ClassInfo() {
                   <p className="card-text">
                   কোর্স ফি: <strong>৳1500</strong><span><p><s>৳3500</s></p></span>
                   </p>
+                  {userdata
+                     ? <Link to={`/FormJoin/${id}`} className="btn btn-primary">কোর্সটি কিনুন</Link>
+                    : <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
                   
-                  <Link to="/FormJoin" className="btn btn-primary">কোর্সটি কিনুন</Link >
 
                   <ul className="list-unstyled">
                       <li className="mb-2 ">
@@ -296,9 +318,9 @@ function ClassInfo() {
       </div>
 
   
-    </div>
   </div>
   </AdminLayout>
+  </>
   )
 }
 

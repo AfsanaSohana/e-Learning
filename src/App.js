@@ -17,6 +17,7 @@ import Instructor from './pages/Instructor';
 import QuizTest from './pages/QuizTest';
 import FormJoin from './pages/FormJoin';
 import StudentForm from './pages/StudentForm';
+import StudentLogin from './pages/StudentLogin';
 import CourseInterface from './pages/CourseInterface';
 
 function App() {
@@ -33,13 +34,14 @@ function App() {
         <Route path="/DemoClass1" element={<DemoClass1 />} />
         <Route path="/OnlineBatch" element={<OnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
-        <Route path="//SclClassInfo" element={<SclClassInfo />} />
-        <Route path="" element={<SclClassInfo />} />
+        <Route path="/SclClassInfo/:id" element={<SclClassInfo />} />
+        {/* <Route path="" element={<SclClassInfo />} /> */}
         <Route path="/Certificate" element={<Certificate />} />
         <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />
         <Route path="/QuizTest" element={<QuizTest />} />
-        <Route path="/FormJoin" element={<FormJoin />} />
-        <Route path="/StudentForm" element={<StudentForm />} />
+        <Route path="/FormJoin/:batch_id" element={<FormJoin />} />
+        <Route path="/student_register" element={<StudentForm />} />
+        <Route path="/student_login" element={<StudentLogin />} />
         <Route path="/CourseInterface" element={<CourseInterface />} />
        
       </Routes>

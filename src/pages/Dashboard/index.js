@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import AdminLayout from '../../layouts/AdminLayout'
 import Slider from '../Slider';
+import axios from 'axios';
 import { Button, Modal } from 'react-bootstrap';
 import { Link, useLocation} from 'react-router-dom';
 import Form from '../Form';
@@ -8,9 +9,32 @@ import Instructor from '../Instructor';
 
 
 function Dashboard() {
-const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const[data, setData]=useState([]);
+    const[batchData, setBatchData]=useState([]);
+
+    useEffect(() => {
+        getDatas();
+    }, []);
+
+    function getDatas() {
+        axios.get(`${process.env.REACT_APP_API_URL}/course`).then(function(response) {
+            setData(response.data.data);
+        });
+    }
+    const getBatch = async (d) => {
+        await axios.get(`${process.env.REACT_APP_API_URL}/batch?course_id=${d.id}`).then(function(response) {
+            setBatchData(response.data.data);
+        });
+    }
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+
+    const handleShow = async (d) => {
+        await getBatch(d);
+        setShow(true);
+    };
+
     return (
         <AdminLayout>
         
@@ -18,93 +42,47 @@ const [show, setShow] = useState(false);
         <Modal.Header closeButton>
           <Modal.Title>এইচএসসি এবং এসএসসি ২৫</Modal.Title>
         </Modal.Header>
-        <Modal.Body> 
-            {/*popuplist */}
-  
-          <div className="list-box">
-            <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
-            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
-            
-            <Link to="/DemoClass1" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
-          </div>
-
-          {/* List Box 2 */}
-          <div className="list-box">
-            <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
-            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 2"/>
-            <Link to="/SscHsc" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
-          </div>
-
-          {/* List Box 3 */}
-          <div className="list-box">
-            <div className="text-left">HSC, SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)</div>
-            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
-            <Link to="/SscHsc" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
-          </div>
-          {/* List Box 4 */}
-          <div className="list-box">
-            <div className="text-left">HSC 26 অনলাইন ব্যাচ (বাংলা, ইংরেজি, তথ্য ও যোগাযোগ প্রযুক্তি)</div>
-            <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 3"/>
-            <Link to="/SscHsc" className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
-          </div>
-</Modal.Body>
-        <Modal.Footer>
-          
-        {/* <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button> */}
-        </Modal.Footer>
-      </Modal>
+            <Modal.Body> 
+                {/*popuplist */}
+                
+                {batchData && batchData.map((d, key) =>
+                    <div className="list-box">
+                        <div className="text-left">{d.batch_name}</div>
+                        <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
+                        <Link to={`/SclClassInfo/${d.id}`} className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
+                    </div>
+                )}
+            </Modal.Body>
+            <Modal.Footer>
+                <Link to={`/DemoClass1`} className="btn btn-outline-success ms-2" >সবগুলো দেখুন </Link>
+                {/* <Button variant="secondary" onClick={handleClose}>
+                    Close
+                </Button>
+                <Button variant="primary" onClick={handleClose}>
+                    Save Changes
+                </Button> */}
+            </Modal.Footer>
+        </Modal>
       <Slider />
             <div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"  onClick={handleShow}>
+                    {data && data.map((d, key) =>
+                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"  onClick={()=>handleShow(d)}>
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                                    <h5 className="mb-3">এস এস সি, ২০২৫ এইস এইস এস সি২০২৫</h5>
-                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
-
+                                    <h5 className="mb-3">{d.course_name}</h5>
+                                    <p>{d.details}</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s" onClick={handleShow}>
-                            <div className="service-item text-center pt-3">
-                                <div className="p-4">
-                                    <i className="fa fa-3x fa-globe text-primary mb-4"></i>
-                                    <h5 className="mb-3">স্কুল, বিশ্ববিদ্যালয় ভর্তি‍ পরীক্ষা</h5>
-                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" onClick={handleShow}>
-                            <div className="service-item text-center pt-3">
-                                <div className="p-4">
-                                    <i className="fa fa-3x fa-home text-primary mb-4"></i>
-                                    <h5 className="mb-3">বিসিএস সকল পার্টের প্রস্তুতি</h5>
-                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" onClick={handleShow}>
-                            <div className="service-item text-center pt-3">
-                                <div className="p-4">
-                                    <i className="fa fa-3x fa-book-open text-primary mb-4"></i>
-                                    <h5 className="mb-3">চাকরি ও শিক্ষক নিয়োগ প্রস্তুতি</h5>
-                                    <p>সপ্তাহে ৬ দিন ক্লাস</p>
-                                </div>
-                            </div>
-                        </div>
+                    )}
                     </div>
                 </div>
             </div>
-{/* ক্লাস বুকিং */}
-<div className="container-xxl py-5 bg-dark">
+            {/* ক্লাস বুকিং */}
+            <div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">
                         
@@ -130,9 +108,9 @@ const [show, setShow] = useState(false);
                     </div>
                 </div>
             </div>
-{/* ক্লাস বুকিং */}
+            {/* ক্লাস বুকিং */}
 
-{/* ক্লাস বুকিং শেষ */}
+            {/* ক্লাস বুকিং শেষ */}
 
 
             <div className="container-xxl py-5">
