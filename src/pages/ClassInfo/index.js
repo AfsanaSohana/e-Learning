@@ -10,13 +10,17 @@ function ClassInfo() {
 
   const[batchData, setBatchData]=useState([]);
     const[routineData, setRoutineData]=useState([]);
+    const[coursePlanData, setCoursePlan]=useState([]);
   const {id} = useParams();
   function getDatas(){
     axios.get(`${process.env.REACT_APP_API_URL}/batch/${id}`).then(function(response) {
-      setdata(response.data.data);
+      setBatchData(response.data.data);
     });
     axios.get(`${process.env.REACT_APP_API_URL}/routine/${id}`).then(function(response) {
-      setdata(response.data.data);
+      setRoutineData(response.data.data);
+    });
+    axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
+      setCoursePlan(response.data.data);
     });
   }
 
@@ -99,11 +103,12 @@ function ClassInfo() {
         </div>
         {/* sylabus */}
         <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
-          <h3 className='mt-2'>কোর্স সিলেবাস</h3>
+          <h3 className='mt-2'>{data.Subject_id} সিলেবাস</h3>
           <div class="container mt-4 p-2">
       <table class="table table-bordered">
         <tbody>
-          {/* <!-- Row 1 --> */}
+          {coursePlanData && coursePlanData.map((d, key) =>
+        
           <tr>
             <td>
               <p>{data.Subject_id} সিলেবাস</p>
@@ -136,6 +141,7 @@ function ClassInfo() {
               </div>
             </td>
           </tr>
+          )}
           {/* <!-- Row 2 --> */}
           <tr>
             <td>

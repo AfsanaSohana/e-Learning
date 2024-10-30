@@ -5,7 +5,7 @@ import AdminLayout from '../../../layouts/AdminLayout';
 import {useParams} from "react-router-dom";
 
 function SclClassInfo() {
-  let userdata=JSON.parse(localStorage.getItem("userdata"));
+  let userdata=JSON.parse(localStorage.getItem("frontuserdata"));
   const [data, setdata] = useState([])
   const {id} = useParams();
   function getDatas(){

@@ -11,8 +11,8 @@ const login = async (data) => {
         });
         
         if(response.data.data.token){
-            localStorage.setItem("access_token", response.data.data.token);
-            localStorage.setItem("userdata", JSON.stringify(response.data.data.data));
+            localStorage.setItem("front_access_token", response.data.data.token);
+            localStorage.setItem("frontuserdata", JSON.stringify(response.data.data.data));
             return true;
         }else{
             return false;
@@ -24,8 +24,8 @@ const login = async (data) => {
 }
 
 const logout = ()=>{
-    localStorage.removeItem("access_token");
-    localStorage.removeItem("userdata");
+    localStorage.removeItem("front_access_token");
+    localStorage.removeItem("frontuserdata");
     window.location.reload()
 }
 

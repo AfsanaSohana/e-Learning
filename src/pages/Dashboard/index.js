@@ -51,7 +51,7 @@ function Dashboard() {
                         <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
                         <Link to={`/SclClassInfo/${d.id}`} className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
                     </div>
-                )}
+                 )} 
             </Modal.Body>
             <Modal.Footer>
                 <Link to={`/DemoClass1`} className="btn btn-outline-success ms-2" >সবগুলো দেখুন </Link>
