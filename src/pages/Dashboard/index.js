@@ -49,7 +49,7 @@ function Dashboard() {
                     <div className="list-box">
                         <div className="text-left">{d.batch_name}</div>
                         <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
-                        <Link to={`/SclClassInfo/${d.id}`} className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
+                        <Link to={`/ClassInfo/${d.id}`} className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
                     </div>
                 )}
             </Modal.Body>
