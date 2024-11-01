@@ -5,7 +5,7 @@ import AdminLayout from '../../layouts/AdminLayout';
 import {useParams} from "react-router-dom";
 
 function ClassInfo() {
-  let userdata=JSON.parse(localStorage.getItem("userdata"));
+  let userdata=JSON.parse(localStorage.getItem("frontuserdata"));
   const [data, setdata] = useState([])
 
   const[batchData, setBatchData]=useState([]);
@@ -62,7 +62,7 @@ function ClassInfo() {
                   <td className="table-primary">{data.start_time}:{data.note}</td>
                   <td className="table-secondary">{data.day_name}</td>
                 </tr>
-                )}
+                )};
                 {/* <tr>
                   <td className="time-column">সাপ্তাহিক ছুটি</td>
                   <td className="subject">রবিবার</td>
@@ -103,7 +103,7 @@ function ClassInfo() {
         </div>
         {/* sylabus */}
         <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
-          <h3 className='mt-2'>{data.Subject_id} সিলেবাস</h3>
+          <h3 className='mt-2'>{data.Subject_id} কোর্স সিলেবাস</h3>
           <div class="container mt-4 p-2">
       <table class="table table-bordered">
         <tbody>
