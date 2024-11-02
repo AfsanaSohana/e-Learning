@@ -10,7 +10,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import OnlineBatch from './pages/OnlineBatch';
 import ClassInfo from './pages/ClassInfo';
 import PopularCourse from './pages/PopularCourse';
-import SclClassInfo from './pages/ClassInfo/SclClassInfo';
 import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
 import Certificate from './pages/certificate';
 import Instructor from './pages/Instructor';
@@ -34,7 +33,7 @@ function App() {
         <Route path="/DemoClass1" element={<DemoClass1 />} />
         <Route path="/OnlineBatch" element={<OnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
-        <Route path="/SclClassInfo/:id" element={<SclClassInfo />} />
+        <Route path="/ClassInfo/:id" element={<ClassInfo />} />
         {/* <Route path="" element={<SclClassInfo />} /> */}
         <Route path="/Certificate" element={<Certificate />} />
         <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />

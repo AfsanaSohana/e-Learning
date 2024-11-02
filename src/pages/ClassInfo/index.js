@@ -6,6 +6,7 @@ import {useParams} from "react-router-dom";
 
 function ClassInfo() {
   let userdata=JSON.parse(localStorage.getItem("frontuserdata"));
+  console.log(userdata)
   const [data, setdata] = useState([])
 
   const[batchData, setBatchData]=useState([]);

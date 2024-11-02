@@ -4,12 +4,14 @@ import AdminLayout from '../../layouts/AdminLayout';
 import {useParams} from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 function FormJoin() {
+
   const [inputs, setInputs] = useState({batch_id:'',course_id:'',student_id:'',enroll_date:'',fees:'',trans_number:'',trans_id:'',payment_method:''});
+  
   const [batchData, setbatchData] = useState([])
   const navigate=useNavigate();
   const {batch_id} = useParams();
-  let studentdata=JSON.parse(localStorage.getItem("userdata"));
-
+  let studentdata=JSON.parse(localStorage.getItem("frontuserdata"));
+   
   function getDatas(){
     axios.get(`${process.env.REACT_APP_API_URL}/batch/${batch_id}`).then(function(response) {
       setbatchData(response.data.data);
@@ -44,7 +46,7 @@ const handleSubmit = async(e) => {
             data: inputs
         });
         console.log(response)
-        navigate('/batch')
+        navigate('/')
     } 
     catch(e){
         console.log(e);

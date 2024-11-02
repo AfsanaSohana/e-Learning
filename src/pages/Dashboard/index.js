@@ -6,6 +6,9 @@ import { Button, Modal } from 'react-bootstrap';
 import { Link, useLocation} from 'react-router-dom';
 import Form from '../Form';
 import Instructor from '../Instructor';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 
 function Dashboard() {
     const[data, setData]=useState([]);
@@ -33,6 +36,25 @@ function Dashboard() {
         await getBatch(d);
         setShow(true);
     };
+// Define breakpoints and items to show per screen size
+  const responsive   = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
     return (
         <AdminLayout>
@@ -66,6 +88,18 @@ function Dashboard() {
             <div className="container-xxl py-5 bg-dark">
                 <div className="container">
                     <div className="row g-4">
+                  {/* Carousel Component */}
+        <Carousel 
+          responsive={responsive}
+          infinite={true} // Infinite loop
+          autoPlay={true} // AutoPlay
+          autoPlaySpeed={3000} // Speed of autoplay
+          keyBoardControl={true}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]} // Hide arrows on small devices
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
                     {data && data.map((d, key) =>
                         <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"  onClick={()=>handleShow(d)}>
                             <div className="service-item text-center pt-3">
@@ -77,6 +111,7 @@ function Dashboard() {
                             </div>
                         </div>
                     )}
+                    </Carousel>
                     </div>
                 </div>
             </div>
