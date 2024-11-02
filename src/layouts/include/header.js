@@ -2,7 +2,7 @@ import React from 'react'
 import { Link,useLocation } from 'react-router-dom'
 import {logout} from '../../Api/AllApi'
 function Header() {
-    let userdata=JSON.parse(localStorage.getItem("userdata"));
+    let userdata=JSON.parse(localStorage.getItem("frontuserdata"));
     const activeMenu=(e)=>{
         document.querySelectorAll('.submenu').forEach(
             function(e){
@@ -84,8 +84,8 @@ function Header() {
 
                 {userdata ? 
                 <>
-                {userdata.student_name}
-                <button type="btn btn-danger" onClick={logout}>Logout</button>
+                {userdata?.student_name}
+                <button className='btn-secondary btn-border-primary' type="btn btn-danger" onClick={logout}>  Logout</button>
                 </> : 
                 <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
                 

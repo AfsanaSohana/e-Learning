@@ -5,18 +5,27 @@ import AdminLayout from '../../layouts/AdminLayout';
 import {useParams} from "react-router-dom";
 
 function ClassInfo() {
-  let userdata=JSON.parse(localStorage.getItem("userdata"));
+  let userdata=JSON.parse(localStorage.getItem("frontuserdata"));
+  console.log(userdata)
   const [data, setdata] = useState([])
 
   const[batchData, setBatchData]=useState([]);
     const[routineData, setRoutineData]=useState([]);
+    const[coursePlanData, setCoursePlan]=useState([]);
+    const[instructorData, setInstructor]=useState([]);
   const {id} = useParams();
   function getDatas(){
     axios.get(`${process.env.REACT_APP_API_URL}/batch/${id}`).then(function(response) {
-      setdata(response.data.data);
+      setBatchData(response.data.data);
     });
     axios.get(`${process.env.REACT_APP_API_URL}/routine/${id}`).then(function(response) {
-      setdata(response.data.data);
+      setRoutineData(response.data.data);
+    });
+    axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
+      setCoursePlan(response.data.data);
+    });
+    axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
+      setCoursePlan(response.data.data);
     });
   }
 
@@ -58,7 +67,7 @@ function ClassInfo() {
                   <td className="table-primary">{data.start_time}:{data.note}</td>
                   <td className="table-secondary">{data.day_name}</td>
                 </tr>
-                )}
+                )};
                 {/* <tr>
                   <td className="time-column">সাপ্তাহিক ছুটি</td>
                   <td className="subject">রবিবার</td>
@@ -99,11 +108,12 @@ function ClassInfo() {
         </div>
         {/* sylabus */}
         <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
-          <h3 className='mt-2'>কোর্স সিলেবাস</h3>
+          <h3 className='mt-2'>{data.Subject_id} কোর্স সিলেবাস</h3>
           <div class="container mt-4 p-2">
       <table class="table table-bordered">
         <tbody>
-          {/* <!-- Row 1 --> */}
+          {coursePlanData && coursePlanData.map((d, key) =>
+        
           <tr>
             <td>
               <p>{data.Subject_id} সিলেবাস</p>
@@ -136,6 +146,7 @@ function ClassInfo() {
               </div>
             </td>
           </tr>
+          )};
           {/* <!-- Row 2 --> */}
           <tr>
             <td>
@@ -178,28 +189,29 @@ function ClassInfo() {
           
           <div className="table table-bordered p-3">
             {/* List Box 1 */}
+                {instructorData && instructorData.map((d, key) =>
             <tr>
               <td>
                 <div className="list-box">
-                  <div className="text-left"> <h5>Tanmay Dhar</h5>
-                    <p className='text-muted me-2'style={{fontSize:'10' }}> DU, CU (8+ years exp)</p>
+                  <div className="text-left"> <h5>{d.instructor_name}</h5>
+                    <p className='text-muted me-2'style={{fontSize:'10' }}>{d.designation}</p>
                 </div>
                   <img src="/assets/img/teama-1.jpg" alt="Item 1"/>
-            
                 </div>
               </td>
               <td>
               <div className="list-box">
-                  <div className="text-left"> <h5>Tanmay Dhar</h5>
-                    <p className='text-muted me-2'style={{fontSize:'10' }}> DU, CU (8+ years exp)</p>
+                  <div className="text-left"> <h5>{d.instructor_name}</h5>
+                    <p className='text-muted me-2'style={{fontSize:'10' }}> {d.designation}</p>
                 </div>
                   <img src="/assets/img/teamb-2.jpg" alt="Item 1"/>
             
                 </div>
               </td>
               </tr>
+            )}
               {/*  */}
-            <tr>
+            {/* <tr>
               <td>
               <div className="list-box">
                   <div className="text-left"> <h5>Tanmay Dhar</h5>
@@ -218,7 +230,7 @@ function ClassInfo() {
             
                 </div>
               </td>
-              </tr>
+              </tr> */}
           </div> 
         </div> 
         <div className =' mt-3 p-3' id="section3" style={{backgroundColor: '#dee2e6',borderRadius:'3' }}>
