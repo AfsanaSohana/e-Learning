@@ -80,7 +80,7 @@ function ClassInfo() {
         
           <tr>
             <td>
-              <p>{d.Subject_id} সিলেবাস</p>
+              <p>কোর্স সিলেবাস</p>
               <a className="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
                 &darr;
               </a>
