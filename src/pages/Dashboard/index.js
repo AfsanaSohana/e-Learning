@@ -101,7 +101,7 @@ function Dashboard() {
           itemClass="carousel-item-padding-40-px"
         >
                     {data && data.map((d, key) =>
-                        <div className="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"  onClick={()=>handleShow(d)}>
+                        <div className=" wow fadeInUp" data-wow-delay="0.1s"  onClick={()=>handleShow(d)}>
                             <div className="service-item text-center pt-3">
                                 <div className="p-4">
                                     <i className="fa fa-3x fa-graduation-cap text-primary mb-4"></i>

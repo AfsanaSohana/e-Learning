@@ -33,8 +33,7 @@ function App() {
         <Route path="/DemoClass1" element={<DemoClass1 />} />
         <Route path="/OnlineBatch" element={<OnlineBatch />} />
         <Route path="/ClassInfo" element={<ClassInfo />} />
-        <Route path="/ClassInfo/:course_id,instructor_id" element={<ClassInfo />} />
-        {/* <Route path="" element={<SclClassInfo />} /> */}
+        <Route path="/ClassInfo/:batch_id" element={<ClassInfo />} />
         <Route path="/Certificate" element={<Certificate />} />
         <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />
         <Route path="/QuizTest" element={<QuizTest />} />

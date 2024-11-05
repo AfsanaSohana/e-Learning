@@ -7,7 +7,7 @@ import {useParams} from "react-router-dom";
 function ClassInfo() {
   let userdata=JSON.parse(localStorage.getItem("frontuserdata"));
   console.log(userdata)
-  const [data, setdata] = useState([])
+  const [data,setData] = useState([])
 
   const[batchData, setBatchData]=useState([]);
     const[routineData, setRoutineData]=useState([]);
@@ -21,19 +21,16 @@ function ClassInfo() {
     axios.get(`${process.env.REACT_APP_API_URL}/routine/${id}`).then(function(response) {
       setRoutineData(response.data.data);
     });
-    axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
-      setCoursePlan(response.data.data);
-    });
-    axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
-      setCoursePlan(response.data.data);
-    });
+  axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
+  setCoursePlan(response.data.data);
+});
   }
 
   useEffect(() => {
       if(id){
           getDatas();
       }
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -62,65 +59,32 @@ function ClassInfo() {
                 </tr>
               </thead>
               <tbody>
-              {routineData && routineData.map((d, key) =>
-                <tr>
-                  <td className="table-primary">{data.start_time}:{data.note}</td>
-                  <td className="table-secondary">{data.day_name}</td>
+             {routineData && routineData.map((d, key) => (
+                <tr key={key}>
+                  <td className="table-primary">{d.start_time}:{d.note}</td>
+                  <td className="table-secondary">{d.day_name}</td>
                 </tr>
-                )};
-                {/* <tr>
-                  <td className="time-column">সাপ্তাহিক ছুটি</td>
-                  <td className="subject">রবিবার</td>
-                </tr>
-                  <tr>
-                      <td className="time-column">সাপ্তাহিক ছুটি</td>
-                      <td className="table-secondary">সোমবার</td>
-                    
-                      
-                  </tr>
-                  <tr>
-                      <td className="time-column">সাপ্তাহিক ছুটি</td>
-                      <td className="subject">মঙ্গলবার</td>
-                  
-                      
-                  </tr>
-                  <tr>
-                      <td className="time-column">ICT</td>
-                      <td className="table-success">বুধবার</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                      <td className="time-column">সাপ্তাহিক ছুটি</td>
-                      <td className="table-primary">বৃহস্পতিবার</td>
-                      
-                    
-                  </tr>
-                  <tr>
-                      <td className="time-column">সাপ্তাহিক ছুটি</td>
-                      <td className="table-primary">শুক্রবার</td>
-                    
-                    
-                  </tr> */}
+              ))}
+               
                 
               </tbody>
         </table>
         </div>
         {/* sylabus */}
         <div  className="p-2" id="section2  " style={{  backgroundColor: '#e9ecef', borderRadius:'3'}}>
-          <h3 className='mt-2'>{data.Subject_id} কোর্স সিলেবাস</h3>
-          <div class="container mt-4 p-2">
-      <table class="table table-bordered">
+          <h3 className='mt-2'> কোর্স সিলেবাস</h3>
+          <div className="container mt-4 p-2">
+      <table className="table table-bordered">
         <tbody>
           {coursePlanData && coursePlanData.map((d, key) =>
         
           <tr>
             <td>
-              <p>{data.Subject_id} সিলেবাস</p>
-              <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
+              <p>{d.Subject_id} সিলেবাস</p>
+              <a className="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
                 &darr;
               </a>
-              <div class="collapse" id="collapseRow1">
+              <div className="collapse" id="collapseRow1">
                               <ul className="list-unstyled">
                                   <li className="mb-2 ">
                                       <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
@@ -151,10 +115,10 @@ function ClassInfo() {
           <tr>
             <td>
               <p>মডেল টেস্ট</p>
-              <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow2" role="button" aria-expanded="false" aria-controls="collapseRow2">
+              <a className="text-primary" data-bs-toggle="collapse" href="#collapseRow2" role="button" aria-expanded="false" aria-controls="collapseRow2">
                 &darr;
               </a>
-              <div class="collapse" id="collapseRow2">
+              <div className="collapse" id="collapseRow2">
               <ul className="list-unstyled">
                                   <li className="mb-2 ">
                                       <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
@@ -236,15 +200,15 @@ function ClassInfo() {
         <div className =' mt-3 p-3' id="section3" style={{backgroundColor: '#dee2e6',borderRadius:'3' }}>
           <h3>কোর্স সম্পর্কে বিস্তারিত</h3>
             {/* sylabus */}
-      <table class="table table-bordered ">
+      <table className="table table-bordered ">
           {/* <!-- Row 1 --> */}
           <tr>
             <td>
               <p> কোর্সটিতে যা যা আছে</p>
-              <a class="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
+              <a className="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
                 &darr;
               </a>
-              <div class="collapse" id="collapseRow1">
+              <div className="collapse" id="collapseRow1">
                               <ul className="list-unstyled text-muted">
                                   <li className="mb-2 ">
                         
