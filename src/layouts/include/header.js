@@ -85,7 +85,7 @@ function Header() {
                 {userdata ? 
                 <>
                 {userdata?.student_name}
-                <button className='btn-secondary btn-border-primary' type="btn btn-danger" onClick={logout}>  Logout</button>
+                <button className='btn-primary' onClick={logout}>  Logout</button><span><Link to={'/CourseInterface'} className="btn btn-outline-primary ms-2 me-2" type="button">    GO TO CLASS</Link></span>
                 </> : 
                 <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
                 
