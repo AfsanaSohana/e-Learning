@@ -10,27 +10,24 @@ function ClassInfo() {
   const [data,setData] = useState([])
 
   const[batchData, setBatchData]=useState([]);
-    const[routineData, setRoutineData]=useState([]);
-    const[coursePlanData, setCoursePlan]=useState([]);
-    const[instructorData, setInstructor]=useState([]);
-  const {id} = useParams();
+  const[routineData, setRoutineData]=useState([]);
+  const[coursePlanData, setCoursePlan]=useState([]);
+  const[instructorData, setInstructor]=useState([]);
+  const {batch_id} = useParams();
+
   function getDatas(){
-    axios.get(`${process.env.REACT_APP_API_URL}/batch/${id}`).then(function(response) {
+    axios.get(`${process.env.REACT_APP_API_URL}/batch/${batch_id}`).then(function(response) {
       setBatchData(response.data.data);
+      console.log(response.data.data)
     });
-    axios.get(`${process.env.REACT_APP_API_URL}/routine/${id}`).then(function(response) {
-      setRoutineData(response.data.data);
-    });
-  axios.get(`${process.env.REACT_APP_API_URL}/coursePlan/${id}`).then(function(response) {
-  setCoursePlan(response.data.data);
-});
+
   }
 
   useEffect(() => {
-      if(id){
+      if(batch_id){
           getDatas();
       }
-  }, [id]);
+  }, [batch_id]);
 
   return (
     <>
@@ -59,7 +56,7 @@ function ClassInfo() {
                 </tr>
               </thead>
               <tbody>
-             {routineData && routineData.map((d, key) => (
+             {batchData.routine && batchData.routine.map((d, key) => (
                 <tr key={key}>
                   <td className="table-primary">{d.start_time}:{d.note}</td>
                   <td className="table-secondary">{d.day_name}</td>
@@ -76,37 +73,20 @@ function ClassInfo() {
           <div className="container mt-4 p-2">
       <table className="table table-bordered">
         <tbody>
-          {coursePlanData && coursePlanData.map((d, key) =>
+          {batchData?.course?.courseplan && batchData?.course?.courseplan.map((d, key) =>
         
           <tr>
             <td>
-              <p>{d.Subject_id} সিলেবাস</p>
               <a className="text-primary" data-bs-toggle="collapse" href="#collapseRow1" role="button" aria-expanded="false" aria-controls="collapseRow1">
                 &darr;
               </a>
               <div className="collapse" id="collapseRow1">
-                              <ul className="list-unstyled">
-                                  <li className="mb-2 ">
-                                      <i className="bi bi-document "></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                      <p className='text-muted'>5 টি ভিডিও</p>
-                                  </li>
-                                  <li className="mb-2">
-                                      <i className="bi bi-box-seam"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                      <p className='text-muted'>5 টি ভিডিও</p>
-                                  </li>
-                                  <li className="mb-2">
-                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                      <p className='text-muted'>5 টি ভিডিও</p>
-                                  </li>
-                                  <li className="mb-2">
-                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                      <p className='text-muted'>5 টি ভিডিও</p>
-                                  </li>
-                                  <li className="mb-2">
-                                      <i className="bi bi-shield-lock"></i> অধ্যায়-১: তথ্য ও যোগাযোগ প্রযুক্তি: বিশ্ব ও বাংলাদেশ প্রেক্ষিত
-                                      <p className='text-muted'>5 টি ভিডিও</p>
-                                  </li>
-                              </ul>
+                  <ul className="list-unstyled">
+                      <li className="mb-2 ">
+                          <i className="bi bi-document "></i> {d.title}
+                          <p className='text-muted'>5 টি ভিডিও</p>
+                      </li>
+                  </ul>
               </div>
             </td>
           </tr>
@@ -153,27 +133,18 @@ function ClassInfo() {
           
           <div className="table table-bordered p-3">
             {/* List Box 1 */}
-                {instructorData && instructorData.map((d, key) =>
+                {batchData.instructor &&
             <tr>
               <td>
                 <div className="list-box">
-                  <div className="text-left"> <h5>{d.instructor_name}</h5>
-                    <p className='text-muted me-2'style={{fontSize:'10' }}>{d.designation}</p>
+                  <div className="text-left"> <h5>{batchData.instructor?.instructor_name}</h5>
+                    <p className='text-muted me-2'style={{fontSize:'10' }}>{batchData.instructor?.designation}</p>
                 </div>
-                  <img src="/assets/img/teama-1.jpg" alt="Item 1"/>
-                </div>
-              </td>
-              <td>
-              <div className="list-box">
-                  <div className="text-left"> <h5>{d.instructor_name}</h5>
-                    <p className='text-muted me-2'style={{fontSize:'10' }}> {d.designation}</p>
-                </div>
-                  <img src="/assets/img/teamb-2.jpg" alt="Item 1"/>
-            
+                  <img src="{'d.photo'}" alt="Item 1"/>
                 </div>
               </td>
               </tr>
-            )}
+            }
               {/*  */}
             {/* <tr>
               <td>
@@ -265,7 +236,7 @@ function ClassInfo() {
                   কোর্স ফি: <strong>৳1500</strong><span><p><s>৳3500</s></p></span>
                   </p>
                   {userdata
-                     ? <Link to={`/FormJoin/${id}`} className="btn btn-primary">কোর্সটি কিনুন</Link>
+                     ? <Link to={`/FormJoin/${batch_id}`} className="btn btn-primary">কোর্সটি কিনুন</Link>
                     : <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
                   
 

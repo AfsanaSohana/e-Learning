@@ -18,9 +18,6 @@ import FormJoin from './pages/FormJoin';
 import StudentForm from './pages/StudentForm';
 import StudentLogin from './pages/StudentLogin';
 import CourseInterface from './pages/CourseInterface';
-
-import Cards from './pages/Card';
-
 function App() {
   return (
     <BrowserRouter>
@@ -43,7 +40,7 @@ function App() {
         <Route path="/student_register" element={<StudentForm />} />
         <Route path="/student_login" element={<StudentLogin />} />
         <Route path="/CourseInterface" element={<CourseInterface />} />
-        <Route path="/Cards" element={<Cards/>} />
+      
        
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AdminLayout from '../../layouts/AdminLayout';
@@ -6,6 +7,19 @@ import { Link } from "react-router-dom";
 
 
 function CourseInterface() {
+    const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getDatas();
+  }, []);
+
+  function getDatas() {
+    // axios.get(`${process.env.REACT_APP_API_URL}/`)
+    //   .then(function(response) {
+    //     setData(response.data.data);
+    //   });
+  }
+  
     const [liveClassLink, setLiveClassLink] = useState(
         "https://zoom.us/j/your-zoom-link" // Replace with actual live class link
       );
@@ -27,7 +41,7 @@ function CourseInterface() {
         {/* Header */}
         <div className="row mb-4">
           <div className="col-12">
-            <h1 className="display-4 text-white">Web-development</h1>
+            <h1 className="display-4 text-white">{data.course}</h1>
             <h4 className="lead text-white">
               আমাদের ক্লাসে স্বাগতম<span><p className='mt-2'><small>এখানে শীক্ষার্থী তার কোর্স সম্পর্কিত সকল কার্যক্রম দেখতে পারবে</small></p></span>
             </h4>

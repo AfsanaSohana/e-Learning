@@ -70,6 +70,7 @@ function Instructor() {
                 </div>
               </div>
               <div className="text-center p-4">
+                
                 <h5 className="mb-0">{d.instructor_name}</h5>
                 <small>{d.designation}</small>
               </div>
