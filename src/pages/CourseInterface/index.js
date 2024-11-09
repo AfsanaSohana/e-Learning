@@ -11,7 +11,6 @@ function CourseInterface() {
     console.log(userdata);
     const [batchLectureSheetData, setbatchLectureSheetData] = useState([]);
     const { batchLectureSheet_id } = useParams();
-  
     const [data, setData] = useState([]);
     const [liveClassLink, setLiveClassLink] = useState(
         "https://zoom.us/j/your-zoom-link" // Replace with actual live class link
