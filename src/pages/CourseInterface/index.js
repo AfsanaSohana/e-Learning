@@ -19,7 +19,7 @@ function CourseInterface() {
     function getDatas() {
         axios.get(`${process.env.REACT_APP_API_URL}/batchLecturesheet/${batchLectureSheet_id}`)
           .then(response => {
-            setBatchLectureSheetData(response.data.data);
+            setbatchLectureSheetData(response.data.data);
             console.log(response.data.data);
           });
       }
@@ -50,7 +50,7 @@ function CourseInterface() {
                     {/* Header */}
                     <div className="row mb-4">
                         <div className="col-12">
-                            <h1 className="display-4 text-white">{data.course}</h1>
+                            <h1 className="display-4 text-white">{batchLectureSheetData.course_id}</h1>
                             <h4 className="lead text-white">
                                 আমাদের ক্লাসে স্বাগতম
                                 <span>

@@ -9,9 +9,9 @@ function ClassInfo() {
   console.log(userdata);
   const [data, setData] = useState([]);
   const [batchData, setBatchData] = useState([]);
-  const [routineData, setRoutineData] = useState([]);
-  const [coursePlanData, setCoursePlan] = useState([]);
-  const [instructorData, setInstructor] = useState([]);
+  // const [routineData, setRoutineData] = useState([]);
+  // const [coursePlanData, setCoursePlan] = useState([]);
+  // const [instructorData, setInstructor] = useState([]);
   const { batch_id } = useParams();
 
   function getDatas() {
@@ -155,9 +155,9 @@ function ClassInfo() {
               </div>
 
               <div className="card-body overflow x-hidden">
-                <p className="card-title">HSC 25 ICT 2.0 (সম্পূর্ণ সিলেবাস)</p>
+                <p className="card-title">{batchData.batch_name} (সম্পূর্ণ সিলেবাস)</p>
                 <p className="card-text">
-                  কোর্স ফি: <strong>৳1500</strong> <span><s>৳3500</s></span>
+                  কোর্স ফি: <strong>৳{batchData.discount_price}</strong> <span><s>৳{batchData.price}</s></span>
                 </p>
                 {userdata ? (
                   <Link to={`/FormJoin/${batch_id}`} className="btn btn-primary">কোর্সটি কিনুন</Link>
@@ -166,8 +166,8 @@ function ClassInfo() {
                     <i className="fa fa-arrow-right ms-3"></i> Join Now </Link>
                 )}
                 <ul className="list-unstyled">
-                  <li className="mb-2"><i className="bi bi-book"></i> ১টি বিষয়</li>
-                  <li className="mb-2"><i className="bi bi-box-seam"></i> প্রতি সপ্তাহে ১টি লাইভ ক্লাস</li>
+                  <li className="mb-2"><i className="bi bi-book"></i> {batchData.number_of_subject}টি বিষয় </li>
+                  <li className="mb-2"><i className="bi bi-box-seam"></i> প্রতি সপ্তাহে {batchData.weekly_exam}টি লাইভ ক্লাস </li>
                   <li className="mb-2"><i className="bi bi-shield-lock"></i> ডেইলি ও উইকলি এক্সাম</li>
                   <li className="mb-2"><i className="bi bi-shield-lock"></i> অধ্যায়ভিত্তিক লেকচার শিট</li>
                   <li className="mb-2"><i className="bi bi-shield-lock"></i> মডেল টেস্ট</li>
