@@ -32,7 +32,7 @@ function ClassInfo() {
     <>
       <AdminLayout>
         <div className='gradiant-background p-3'>
-          <p>{data.batch_details}</p>
+          <p>{batchData.batch_details}</p>
           <div className='right image'>
             <img src="/assets/img/teacher1.png" alt="Image 2" height={200} width={400} />
           </div>
@@ -55,7 +55,7 @@ function ClassInfo() {
                     <tbody>
                       {batchData.routine && batchData.routine.map((d, key) => (
                         <tr key={key}>
-                          <td className="table-primary">{d.start_time}:{d.note}</td>
+                          <td className="table-primary">{d.start_time}</td>
                           <td className="table-secondary">{d.day_name}</td>
                         </tr>
                       ))}
@@ -103,7 +103,16 @@ function ClassInfo() {
                               <h5>{batchData.instructor.instructor_name}</h5>
                               <p className='text-muted me-2' style={{ fontSize: '10' }}>{batchData.instructor.designation}</p>
                             </div>
-                            <img src={'d.photo'} alt="Instructor" />
+                            <img src={batchData.instructor.photo} alt="Instructor" />
+                          </div>
+                        </td>
+                        <td>
+                          <div className="list-box">
+                            <div className="text-left">
+                              <h5>{batchData.instructor.instructor_name}</h5>
+                              <p className='text-muted me-2' style={{ fontSize: '10' }}>{batchData.instructor.designation}</p>
+                            </div>
+                            <img src={batchData.instructor.photo} alt="Instructor" />
                           </div>
                         </td>
                       </tr>
