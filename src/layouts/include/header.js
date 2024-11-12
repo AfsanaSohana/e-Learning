@@ -33,7 +33,7 @@ function Header() {
                  
                     
                     <div className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle position-relative has-icon-left" data-bs-toggle="dropdown" ><i class="fa-duotone fa-solid fa-backpack"></i>ক্লাস ৬-১২</a>
+                        <a href="#" className="nav-link dropdown-toggle position-relative has-icon-left" data-bs-toggle="dropdown" ><i className="fa-duotone fa-solid fa-backpack"></i>ক্লাস ৬-১২</a>
                         <div className="dropdown-menu fade-down m-0">
                             <Link to={"/DemoClass1"}  href="team.html" className="dropdown-item position-relative has-icon-left">Class one</Link>
                             <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Class two</Link>
@@ -85,7 +85,7 @@ function Header() {
                 {userdata ? 
                 <>
                 {userdata?.student_name}
-                <button className='btn-primary' onClick={logout}>  Logout</button><span><Link to={'/CourseInterface'} className="btn btn-outline-primary ms-2 me-2" type="button">    GO TO CLASS</Link></span>
+                <button className='btn-primary' onClick={logout}>  Logout</button><span><Link to={'/student/batch'} className="btn btn-outline-primary ms-2 me-2" type="button">    GO TO CLASS</Link></span>
                 </> : 
                 <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
                 

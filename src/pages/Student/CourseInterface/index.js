@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
-import AdminLayout from '../../layouts/AdminLayout';
+import AdminLayout from "../../../layouts/AdminLayout";
 import { useParams } from 'react-router-dom';
 
 function CourseInterface() {
     let userdata = JSON.parse(localStorage.getItem("frontuserdata"));
-    console.log(userdata);
     const [batchLectureSheetData, setbatchLectureSheetData] = useState([]);
-    const { batchLectureSheet_id } = useParams();
+    const { batch_id } = useParams();
     const [data, setData] = useState([]);
     const [liveClassLink, setLiveClassLink] = useState(
         "https://zoom.us/j/your-zoom-link" // Replace with actual live class link
     );
 
     function getDatas() {
-        axios.get(`${process.env.REACT_APP_API_URL}/batchLecturesheet/${batchLectureSheet_id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/batchLecturesheet/${batch_id}`)
           .then(response => {
             setbatchLectureSheetData(response.data.data);
             console.log(response.data.data);
@@ -25,10 +22,10 @@ function CourseInterface() {
       }
     
       useEffect(() => {
-        if (batchLectureSheet_id) {
+        if (batch_id) {
           getDatas();
         }
-      }, [batchLectureSheet_id]);
+      }, [batch_id]);
     
 
     function getDatas() {
