@@ -79,7 +79,7 @@ const StudentForm = () => { // Add const to declare the component
                 <input type="password" className="form-control" id="password" name="password" value={inputs.password} onChange={handleChange} placeholder="Enter a password" />
               </div>
 
-              <Link to="/Dashboard" type="submit" className="btn btn-primary w-100">Submit</Link>
+              <button type="submit" className="btn btn-primary w-100">Submit</button>
             </form>
           </div>
         </div>

@@ -47,7 +47,7 @@ function CourseInterface() {
                     {/* Header */}
                     <div className="row mb-4">
                         <div className="col-12">
-                            <h1 className="display-4 text-white">{batchLectureSheetData.course.course_name }</h1>
+                            <h1 className="display-4 text-white">{batchLectureSheetData?.course?.course_name }</h1>
                             <h4 className="lead text-white">
                                 আমাদের ক্লাসে স্বাগতম
                                 <span>

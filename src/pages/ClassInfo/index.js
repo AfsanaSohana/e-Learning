@@ -79,7 +79,7 @@ function ClassInfo() {
                                 <ul className="list-unstyled">
                                   <li className="mb-2">
                                     <i className="bi bi-document"></i> {d.title}
-                                    <p className='text-muted'>5 টি ভিডিও</p>
+                                    <p className='file'>{d.document}</p>
                                   </li>
                                 </ul>
                               </div>
