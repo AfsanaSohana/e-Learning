@@ -68,11 +68,10 @@ function Header() {
                     </div>
                     
                     <div className="nav-item dropdown">
-                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">অনলাইন ব্যাচ</a>
+                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">সার্টিফিকেট</a>
                         <div className="dropdown-menu fade-down m-0">
-                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item"> online batch(6-10)</Link>
-                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">SSC</Link>
-                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item">Hsc</Link>
+                            <Link to={"/SscHsc"}  href="team.html" className="dropdown-item"> আবেদন করুন </Link>
+                           
                             
                            
                         </div>
@@ -85,7 +84,7 @@ function Header() {
                 {userdata ? 
                 <>
                 {userdata?.student_name}
-                <button className='btn-primary' onClick={logout}>  Logout</button><span><Link to={'/student/batch'} className="btn btn-outline-primary ms-2 me-2" type="button">    GO TO CLASS</Link></span>
+                <button className='btn-primary' onClick={logout}>  Logout</button> <span><Link to={'/student/batch'} className="btn btn-outline-primary ms-2 me-2" type="button">    GO TO CLASS</Link></span>
                 </> : 
                 <Link to={"/student_login"}  href=""className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i className="fa fa-arrow-right ms-3"></i>Join Now</Link>}
                 

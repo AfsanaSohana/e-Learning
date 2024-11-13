@@ -5,7 +5,7 @@ import AdminLayout from "../../../layouts/AdminLayout";
 import { useParams } from 'react-router-dom';
 
 function CourseInterface() {
-    let userdata = JSON.parse(localStorage.getItem("frontuserdata"));
+    let userData = JSON.parse(localStorage.getItem("frontuserdata"));
     const [batchLectureSheetData, setbatchLectureSheetData] = useState([]);
     const { batch_id } = useParams();
     const [data, setData] = useState([]);
@@ -14,7 +14,7 @@ function CourseInterface() {
     );
 
     function getDatas() {
-        axios.get(`${process.env.REACT_APP_API_URL}/batchLecturesheet/${batch_id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/batchLecturesheet?course_id=${batch_id}`)
           .then(response => {
             setbatchLectureSheetData(response.data.data);
             console.log(response.data.data);
