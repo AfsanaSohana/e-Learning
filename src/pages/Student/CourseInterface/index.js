@@ -6,34 +6,36 @@ import { useParams } from 'react-router-dom';
 
 function CourseInterface() {
     let userData = JSON.parse(localStorage.getItem("frontuserdata"));
-    const [batchLectureSheetData, setbatchLectureSheetData] = useState([]);
-    const { batch_id } = useParams();
+    const [batchData, setbatchData] = useState([]);
+    const { interface_id } = useParams();
     const [data, setData] = useState([]);
+    const [batchLectureSheetData, SetbatchLectureSheetData] = useState([]);
     const [liveClassLink, setLiveClassLink] = useState(
         "https://zoom.us/j/your-zoom-link" // Replace with actual live class link
     );
 
     function getDatas() {
-        axios.get(`${process.env.REACT_APP_API_URL}/batchLecturesheet?course_id=${batch_id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/course_details/${interface_id}`)
           .then(response => {
-            setbatchLectureSheetData(response.data.data);
+            SetbatchLectureSheetData(response.data.data);
             console.log(response.data.data);
           });
       }
     
+    
       useEffect(() => {
-        if (batch_id) {
+        if (interface_id) {
           getDatas();
         }
-      }, [batch_id]);
+      }, [interface_id]);
     
 
-    function getDatas() {
-        // axios.get(`${process.env.REACT_APP_API_URL}/`)
-        //   .then(function(response) {
-        //     setData(response.data.data);
-        //   });
-    }
+    // function getDatas() {
+    //     axios.get(`${process.env.REACT_APP_API_URL}/`)
+    //       .then(function(response) {
+    //         setData(response.data.data);
+    //       });
+    // }
 
     const handleJoinLiveClass = () => {
         window.open(liveClassLink, "_blank");
@@ -85,9 +87,9 @@ function CourseInterface() {
                                     </div>
                                     <div className="card-body">
                                         <ul className="list-group">
-                                            <li className="list-group-item">Module 1: Introduction</li>
-                                            <li className="list-group-item">Module 2: Advanced Topics</li>
-                                            <li className="list-group-item">Module 3: Final Project</li>
+                                            <li className="list-group-item">Module 1: {batchLectureSheetData?.module?.module_1}</li>
+                                            <li className="list-group-item">Module 2:{batchLectureSheetData.module_2}</li>
+                                            <li className="list-group-item">Module 3:{batchLectureSheetData.module_4}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -102,7 +104,7 @@ function CourseInterface() {
                                     <div className="card-body">
                                         <ul className="list-group">
                                             <li className="list-group-item d-flex justify-content-between align-items-center">
-                                                Assignment 1 - Due: Oct 30
+                                                Assignment 1 - Due: {batchLectureSheetData.date}
                                                 <form className="d-inline">
                                                     <input
                                                         type="file"
@@ -117,7 +119,7 @@ function CourseInterface() {
                                             </li>
                                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                                 Quiz 1 - Due: Nov 2
-                                                <a href="#" className="btn btn-success btn-sm">
+                                                <a href="/QuizTest" className="btn btn-success btn-sm">
                                                     Take Quiz
                                                 </a>
                                             </li>

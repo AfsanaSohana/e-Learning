@@ -40,7 +40,7 @@ function App() {
         <Route path="/FormJoin/:batch_id" element={<FormJoin />} />
         <Route path="/student_register" element={<StudentForm />} />
         <Route path="/student_login" element={<StudentLogin />} />
-        <Route path="/CourseInterface/:batch_id" element={<CourseInterface />} />
+        <Route path="/CourseInterface/:interface_id" element={<CourseInterface />} />
         <Route path="/student/batch" element={<BatchList />} />
       
        
