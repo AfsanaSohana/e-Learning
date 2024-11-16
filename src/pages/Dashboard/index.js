@@ -67,7 +67,7 @@ function Dashboard() {
                 {/*popuplist */}
                 
                 {batchData && batchData.map((d, key) =>
-                    <div className="list-box">
+                    <div className="list-box h-50px">
                         <div className="text-left">{d.batch_name}</div>
                         <img src="/assets/img/hsc_25_ob_sqr.jpeg" alt="Item 1"/>
                         <Link to={`/ClassInfo/${d.id}`} className="btn btn-outline-success ms-2" >বিস্তারিত দেখুন</Link>
@@ -150,7 +150,7 @@ function Dashboard() {
             <div className="container-xxl py-5">
                 <div className="container">
                     <div className="row g-5">
-                        <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style={{minHeight: "400px"}}>
+                        <div className="col-lg-6 wow fadeInUp " data-wow-delay="0.1s" style={{minHeight: "400px"}}>
                             <div className="position-relative h-100">
                                 <img className="img-fluid position-absolute w-100 h-100" src="/assets/img/about.jpg" alt="" style={{ objectFit: "cover" }}/>
                             </div>

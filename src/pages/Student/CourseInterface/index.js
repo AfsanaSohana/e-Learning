@@ -17,8 +17,9 @@ function CourseInterface() {
     function getDatas() {
         axios.get(`${process.env.REACT_APP_API_URL}/course_details/${interface_id}`)
           .then(response => {
-            SetbatchLectureSheetData(response.data.data);
-            console.log(response.data.data);
+            console.log(response.data)
+            // SetbatchLectureSheetData(response.data.data);
+            // console.log(response.data.data);
           });
       }
     

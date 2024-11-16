@@ -21,7 +21,7 @@ function Header() {
     }
     return (
         <nav className="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-            <a href="index.html" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <a href="/" className="navbar-brand d-flex align-items-center px-4 px-lg-5">
                 <h2 className="m-0 text-primary"><i className="fa fa-book me-3"></i>eLEARNING</h2>
             </a>
                                                 

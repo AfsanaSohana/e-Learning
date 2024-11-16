@@ -103,16 +103,7 @@ function ClassInfo() {
                               <h5>{batchData.instructor.instructor_name}</h5>
                               <p className='text-muted me-2' style={{ fontSize: '10' }}>{batchData.instructor.designation}</p>
                             </div>
-                            <img src={batchData.instructor.photo} alt="Instructor" />
-                          </div>
-                        </td>
-                        <td>
-                          <div className="list-box">
-                            <div className="text-left">
-                              <h5>{batchData.instructor.instructor_name}</h5>
-                              <p className='text-muted me-2' style={{ fontSize: '10' }}>{batchData.instructor.designation}</p>
-                            </div>
-                            <img src={batchData.instructor.photo} alt="Instructor" />
+                            <img src={`${process.env.REACT_APP_IMG_URL}/instructoradd/${batchData.instructor.photo}`} alt="Instructor" />
                           </div>
                         </td>
                       </tr>
