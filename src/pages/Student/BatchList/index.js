@@ -48,8 +48,8 @@ function BatchList() {
                     <div className="box borderRedius-3">
                         <div className="box-content">
                             <h5 >{d.batch?.batch_name}</h5>
-                            <p><i className="bi bi-star-fill icon"></i>৮টি বিষয়</p>
-                            <p>প্রতি সপ্তাহে ২টি লাইভ ক্লাস</p>
+                            <p><i className="bi bi-star-fill icon"></i>{d.batch?.number_of_subject} বিষয়</p>
+                            <p>প্রতি সপ্তাহে {d.batch?.daily_live} লাইভ ক্লাস</p>
                             <Link to={`/CourseInterface/${d.batch?.id}`} className="btn btn-outline-success" >বিস্তারিত দেখুন</Link>
                             
                         </div>

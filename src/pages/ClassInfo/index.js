@@ -103,7 +103,7 @@ function ClassInfo() {
                               <h5>{batchData.instructor.instructor_name}</h5>
                               <p className='text-muted me-2' style={{ fontSize: '10' }}>{batchData.instructor.designation}</p>
                             </div>
-                            <img src={`${process.env.REACT_APP_IMG_URL}/instructoradd/${batchData.instructor.photo}`} alt="Instructor" />
+                             <img src={`${process.env.REACT_APP_IMG_URL}/instructoradd/${batchData.instructor.photo}`} alt="Instructor" />
                           </div>
                         </td>
                       </tr>
@@ -166,8 +166,8 @@ function ClassInfo() {
                     <i className="fa fa-arrow-right ms-3"></i> Join Now </Link>
                 )}
                 <ul className="list-unstyled">
-                  <li className="mb-2"><i className="bi bi-book"></i> {batchData.number_of_subject}টি বিষয় </li>
-                  <li className="mb-2"><i className="bi bi-box-seam"></i> প্রতি সপ্তাহে {batchData.weekly_exam}টি লাইভ ক্লাস </li>
+                  <li className="mb-2"><i className="bi bi-book"></i> {batchData.number_of_subject} বিষয় </li>
+                  <li className="mb-2"><i className="bi bi-box-seam"></i> প্রতি সপ্তাহে {batchData.weekly_exam} লাইভ ক্লাস </li>
                   <li className="mb-2"><i className="bi bi-shield-lock"></i> ডেইলি ও উইকলি এক্সাম</li>
                   <li className="mb-2"><i className="bi bi-shield-lock"></i> অধ্যায়ভিত্তিক লেকচার শিট</li>
                   <li className="mb-2"><i className="bi bi-shield-lock"></i> মডেল টেস্ট</li>

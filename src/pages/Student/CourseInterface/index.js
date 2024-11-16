@@ -18,8 +18,8 @@ function CourseInterface() {
         axios.get(`${process.env.REACT_APP_API_URL}/course_details/${interface_id}`)
           .then(response => {
             console.log(response.data)
-            // SetbatchLectureSheetData(response.data.data);
-            // console.log(response.data.data);
+            SetbatchLectureSheetData(response.data.data);
+            console.log(response.data.data);
           });
       }
     
@@ -71,7 +71,7 @@ function CourseInterface() {
                             </div>
                             <div className="card-body">
                                 
-                                <p><strong>New Lecture Added:</strong> {batchLectureSheetData.l_sheet_name}</p>
+                                <p><strong>New Lecture Added:</strong> {batchLectureSheetData?.batchLectureSheet?.l_sheet_name}</p>
                                 <p><strong>Exam Date:</strong> The midterm exam will be held on November 10.</p>
                             </div>
                         </div>
@@ -89,8 +89,8 @@ function CourseInterface() {
                                     <div className="card-body">
                                         <ul className="list-group">
                                             <li className="list-group-item">Module 1: {batchLectureSheetData?.module?.module_1}</li>
-                                            <li className="list-group-item">Module 2:{batchLectureSheetData.module_2}</li>
-                                            <li className="list-group-item">Module 3:{batchLectureSheetData.module_4}</li>
+                                            <li className="list-group-item">Module 2:{batchLectureSheetData?.module?.module_2}</li>
+                                            <li className="list-group-item">Module 3:{batchLectureSheetData?.module?.module_4}</li>
                                         </ul>
                                     </div>
                                 </div>
