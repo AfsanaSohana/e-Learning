@@ -105,7 +105,7 @@ function CourseInterface() {
                                     <div className="card-body">
                                         <ul className="list-group">
                                             <li className="list-group-item d-flex justify-content-between align-items-center">
-                                                Assignment 1 - Due: {batchLectureSheetData.date}
+                                                {/* Assignment 1 - Due: {batchLectureSheetData.date} */}
                                                 <form className="d-inline">
                                                     <input
                                                         type="file"
