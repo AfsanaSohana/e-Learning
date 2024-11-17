@@ -32,7 +32,7 @@ function ClassInfo() {
     <>
       <AdminLayout>
         <div className='gradiant-background p-3'>
-          <p>{batchData.batch_details}</p>
+          <h3>{batchData.batch_details}</h3>
           <div className='right image'>
             <img src="/assets/img/teacher1.png" alt="Image 2" height={200} width={400} />
           </div>

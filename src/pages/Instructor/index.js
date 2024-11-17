@@ -60,7 +60,7 @@ function Instructor() {
           {data && data.map((d, k) => (
             <div className="team-item bg-light" key={k}>
               <div className="overflow-hidden">
-                <img className="img-fluid" src="{d.photo}" alt={d.instructor_name} />
+               <img src={`${process.env.REACT_APP_IMG_URL}/instructoradd/${d.photo}`} alt="Instructor"height="300px" width="300px" />
               </div>
               <div className="position-relative d-flex justify-content-center" style={{ marginTop: "-23px" }}>
                 <div className="bg-light d-flex justify-content-center pt-2 px-1">

@@ -43,7 +43,7 @@ const StudentLogin = () => {
               <input type="password" className="form-control" id="password" name="password"
                defaultValue={inputs.password} onChange={handleChange} placeholder="Enter a password"/>
             </div>
-            <button type="submit" className="btn btn-primary w-100"> Submit
+            <button type="submit"href="/StudentLogin" className="btn btn-primary w-100"> Submit
 </button>
           </form>
           
