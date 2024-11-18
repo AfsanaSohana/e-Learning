@@ -9,6 +9,8 @@ function CourseInterface() {
     const [batchData, setbatchData] = useState([]);
     const { interface_id } = useParams();
     const [data, setData] = useState([]);
+    const [selectedFile, setSelectedFile] = useState([]);
+    
     const [batchLectureSheetData, SetbatchLectureSheetData] = useState([]);
     const [liveClassLink, setLiveClassLink] = useState(
         "https://zoom.us/j/your-zoom-link" // Replace with actual live class link
@@ -41,6 +43,11 @@ function CourseInterface() {
     const handleJoinLiveClass = () => {
         window.open(liveClassLink, "_blank");
     };
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}));
+    }
 
     return (
         <AdminLayout>
@@ -72,7 +79,7 @@ function CourseInterface() {
                             <div className="card-body">
                                 
                                 <p><strong>New Lecture Added:</strong> {batchLectureSheetData?.batchLectureSheet?.l_sheet_name}</p>
-                                <p><strong>Exam Date:</strong> The midterm exam will be held on November 10.</p>
+                                <p><strong>Exam Date:</strong> The {batchLectureSheetData?.exam?.exam_name} exam will be held on {batchLectureSheetData?.exam?.start_date}.</p>
                             </div>
                         </div>
                     </div>
@@ -105,13 +112,14 @@ function CourseInterface() {
                                     <div className="card-body">
                                         <ul className="list-group">
                                             <li className="list-group-item d-flex justify-content-between align-items-center">
-                                                {/* Assignment 1 - Due: {batchLectureSheetData.date} */}
+                                                Assignment 1 - Due: {batchLectureSheetData?.assignment?.assignment_name}
                                                 <form className="d-inline">
                                                     <input
                                                         type="file"
                                                         className="form-control d-inline w-50"
                                                         id="assignment1"
                                                         name="assignment1"
+                                                        onChange={handleChange}
                                                     />
                                                     <button type="submit" className="btn btn-primary btn-sm me-1">
                                                         Submit
