@@ -1,4 +1,5 @@
 /********** Template CSS **********/
+
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;
@@ -434,3 +435,16 @@
     padding-right: 0;
     border-right: none;
 }
+.carousel-item {
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow of content */
+    box-sizing: border-box; /* Includes padding in the dimensions */
+    background: #f9f9f9; /* Optional: Add a background for visual consistency */
+    border-radius: 8px; /* Optional: Rounded corners */
+    margin: 0 auto; /* Centers the item horizontally if necessary */
+  }
