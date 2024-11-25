@@ -189,10 +189,6 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-
-
-
-
             <div className="container-xxl py-5 category">
                 <div className="container">
                     <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
@@ -340,15 +336,7 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-
-
-
-
            <Instructor/>
-
-
-
-
             <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div className="container">
                     <div className="text-center">
@@ -403,15 +391,6 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
             <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i className="bi bi-arrow-up"></i></a>
 
         </AdminLayout>
