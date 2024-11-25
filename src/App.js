@@ -13,7 +13,6 @@ import PopularCourse from './pages/PopularCourse';
 import OfferCourseInfo from './pages/ClassInfo/OfferCourseInfo';
 import Certificate from './pages/certificate';
 import Instructor from './pages/Instructor';
-import QuizTest from './pages/QuizTest';
 import FormJoin from './pages/FormJoin';
 import StudentForm from './pages/StudentForm';
 import StudentLogin from './pages/StudentLogin';
@@ -36,7 +35,6 @@ function App() {
         <Route path="/ClassInfo/:batch_id" element={<ClassInfo />} />
         <Route path="/Certificate" element={<Certificate />} />
         <Route path="/OfferCourseInfo" element={<OfferCourseInfo />} />
-        <Route path="/QuizTest" element={<QuizTest />} />
         <Route path="/FormJoin/:batch_id" element={<FormJoin />} />
         <Route path="/student_register" element={<StudentForm />} />
         <Route path="/student_login" element={<StudentLogin />} />
