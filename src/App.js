@@ -16,7 +16,6 @@ import Instructor from './pages/Instructor';
 import FormJoin from './pages/FormJoin';
 import StudentForm from './pages/StudentForm';
 import StudentLogin from './pages/StudentLogin';
-import CourseInterface from './pages/Student/CourseInterface';
 import BatchList from './pages/Student/BatchList';
 function App() {
   return (
@@ -38,7 +37,6 @@ function App() {
         <Route path="/FormJoin/:batch_id" element={<FormJoin />} />
         <Route path="/student_register" element={<StudentForm />} />
         <Route path="/student_login" element={<StudentLogin />} />
-        <Route path="/CourseInterface/:interface_id" element={<CourseInterface />} />
         <Route path="/student/batch" element={<BatchList />} />
       
        
