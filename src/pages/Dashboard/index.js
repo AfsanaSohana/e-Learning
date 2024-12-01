@@ -85,7 +85,7 @@ function Dashboard() {
             </Modal.Footer>
         </Modal>
       <Slider />
-            <div className="container-xxl py-5 bg-dark">
+            <div className="container-xxl py-5 ">
                 <div className="container">
                     <div className="row g-4">
                   {/* Carousel Component */}
@@ -156,7 +156,6 @@ function Dashboard() {
                             </div>
                         </div>
                         <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <h6 className="section-title bg-white text-start text-primary pe-3">About Us</h6>
                             <h1 className="mb-4">আমাদের উদ্দেশ্য</h1>
                             <p className="mb-4">এসএসসি 2025 ব্যাচের শিক্ষার্থীদের আইসিটি বিষয়ে এ প্লাস নিশ্চিত করতে 
                     আমরা নিয়ে এসেছি এইচএসসির 25 অনলাইন ব্যাচ আইসিটি কোর্স, লাইভ ক্লাস, 

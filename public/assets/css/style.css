@@ -4,6 +4,7 @@
     --primary: #06BBCC;
     --light: #F0FBFC;
     --dark: #181d38;
+    --background-image: url('/assets/img/background-image.jpg');
 }
 
 .fw-medium {
