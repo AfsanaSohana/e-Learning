@@ -75,7 +75,7 @@ function Dashboard() {
                  )} 
             </Modal.Body>
             <Modal.Footer>
-                <Link to={`/DemoClass1`} className="btn btn-outline-success ms-2" >সবগুলো দেখুন </Link>
+                <Link to={`/Batch`} className="btn btn-outline-success ms-2" >সবগুলো দেখুন </Link>
                 {/* <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
